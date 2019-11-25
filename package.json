@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "github-pages": "ng build --prod --output-path docs --base-href /beauty-feed/",
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
