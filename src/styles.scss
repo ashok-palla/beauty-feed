@@ -26,6 +26,7 @@ $beauty-feed-theme: mat-light-theme($beauty-feed-primary, $beauty-feed-accent, $
 @include angular-material-theme($beauty-feed-theme);
 
 $color-primary: #a78949;
+$color-secondary: #dfc06e;
 
 html,
 body {
@@ -164,9 +165,65 @@ body .headerimage img {
 .toolbar {
     padding: 10px 20px;
     color: white;
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    width: 100%;
 }
 
 .link-icon,
 .login_and_signup {
     cursor: pointer;
 }
+
+.link-icon:hover,
+.login_and_signup:hover {
+    // background: -webkit-linear-gradient(#e3c370, #66542f) !important;
+    background: linear-gradient(to bottom, $color-secondary 50%, $color-primary 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Slider Style Start */
+.slider {
+    height: 400px;
+    cursor: pointer;
+    margin-top: 50px;
+}
+
+.slider .slider-nav-arrow {
+    width: 60px;
+    height: 90px;
+    background-color: black;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.slider .slider-nav-arrow>i {
+    color: white;
+}
+
+.slider .pagination {
+    padding: 10px 0;
+}
+
+.slider .pagination>.page-index-circle {
+    margin: 0 10px;
+    height: 10px;
+    width: 10px;
+    border: 2px solid $color-primary;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.slider .pagination>.page-index-fill {
+    margin: 0 10px;
+    height: 10px;
+    width: 10px;
+    border: 2px solid $color-primary;
+    background-color: $color-primary;
+    border-radius: 50%;
+}
+
+/* Slider Style End */

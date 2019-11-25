@@ -1,0 +1,15 @@
+<div class="slider" fxLayout="column" [style.background]="'url('+imageArray[pageIndex]+')'" (mouseenter)="clearTimer()"
+    (mouseleave)="getSliderData()">
+    <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
+        <div fxLayoutAlign="center center" class="slider-nav-arrow" (click)="increment()">
+            <i class="material-icons">arrow_back_ios</i>
+        </div>
+        <div fxLayoutAlign="center center" class="slider-nav-arrow" (click)="decrement()">
+            <i class="material-icons">arrow_forward_ios</i>
+        </div>
+    </div>
+    <div fxLayoutAlign="center center" class="pagination">
+        <div [class.page-index-circle]="pageIndex !== i" [class.page-index-fill]="pageIndex === i"
+            *ngFor="let image of imageArray; let i = index;" (click)="pageIndex = i"></div>
+    </div>
+</div>

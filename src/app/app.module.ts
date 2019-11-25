@@ -10,11 +10,13 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BeautyFeedComponent } from './beauty-feed/beauty-feed.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BeautyFeedComponent
+    BeautyFeedComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +30,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
   ],
   providers: [
     // , { provide: HTTP_INTERCEPTORS, useClass: InterceptService, multi: true }
-    // , { provide: LocationStrategy, useClass: HashLocationStrategy }
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })
