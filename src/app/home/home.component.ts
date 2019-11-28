@@ -19,7 +19,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.getSliderData();
   }
-  getSliderData() { this.timer = setInterval(() => { this.increment(); }, 1000); }
+  getSliderData() { this.timer = setInterval(() => { this.increment(); }, 4000); }
   clearTimer() { clearInterval(this.timer); }
   increment() {
     if (this.pageIndex === (this.imageArray.length - 1)) {
