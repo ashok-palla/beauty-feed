@@ -44,7 +44,7 @@
             <h2>FEATURE PRODUCTS</h2>
         </div>
         <div style="display: inline;">
-            <div *ngFor="let prod of products" fxFlex.md="50%" fxFlex.xs="100%" style="display: inline-block;">
+            <div *ngFor="let prod of products" style="display: inline-block;">
                 <div class="inner-protein">
                     <a [href]="prod.url">
                         <img class="lazy" [alt]="prod.name" style="display: inline;"
@@ -544,7 +544,7 @@
                         <li *ngFor="let menu of sharedService.menuLinks"><a href="/mb/AboutUsMB.action" [innerHtml]="menu.name"></a></li>
                     </ul>
                 </div>
-                <div class="mb-address">
+                <div fxShow.gt-sm class="mb-address">
                     <h3>Contact us</h3>
                     <address>
                         +91 99 999 99 999<br>
