@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BeautyFeedComponent } from './beauty-feed/beauty-feed.component';
 import { HomeComponent } from './home/home.component';
 import { ProductComponent } from './product/product.component';
 import { SalesPointComponent } from './sales-point/sales-point.component';
