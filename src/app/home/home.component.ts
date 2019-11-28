@@ -10,18 +10,18 @@ export class HomeComponent implements OnInit {
   timer;
   public pageIndex = 0;
   public imageArray = [
-    '../../assets/I-3.jpg',
-    '../../assets/16.jpg',
-    '../../assets/BackUp/11.jpg',
-    '../../assets/BackUp/12.jpg',
-    '../../assets/BackUp/13.jpg',
-    '../../assets/BackUp/18.jpg'];
+    'assets/I-3.jpg',
+    'assets/16.jpg',
+    'assets/BackUp/11.jpg',
+    'assets/BackUp/12.jpg',
+    'assets/BackUp/13.jpg',
+    'assets/BackUp/18.jpg'];
   public products = [
     {
       name: 'Collagen Shot',
-      image_original_link: '../../assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
-      image_link: '../../assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
-      url: '#/product/1?variation=1'
+      image_original_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
+      image_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
+      url: '#/product/1'
     }
   ];
   @HostBinding('attr.class') role = 'vbox viewport margin_on_top';
