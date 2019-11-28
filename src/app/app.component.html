@@ -1,16 +1,16 @@
 <div fxFlex>
     <div class="toolbar" role="banner">
         <div fxLayout="row" fxFlex>
-            <div routerLink="" fxFlex="20%" fxLayout="row">
+            <div routerLink=""  fxFlex="20%" fxFlex.lt-md="50%" fxLayout="row">
                 <img style="cursor: pointer;" width="150" alt="gaia naturelle" src="assets/logo.png" />
             </div>
-            <div fxFlex="60%" fxLayoutGap="20px" fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="60%" fxHide fxShow.gt-sm fxLayoutGap="20px" fxLayout="row" fxLayoutAlign="start center">
                 <span *ngFor="let menu of sharedService.menuLinks" class="menu-links">
                     <a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" [routerLink]="menu.link"
                         [innerHtml]="menu.name"></a>
                 </span>
             </div>
-            <div fxFlex="20%" fxLayout="row" fxLayoutAlign="end center">
+            <div fxFlex="20%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="end center">
                 <span class="login_and_signup">Login & Sign Up</span>
                 <span fxFlex="20px"></span>
                 <i class="link-icon material-icons" style="color: white;">shopping_cart</i>
