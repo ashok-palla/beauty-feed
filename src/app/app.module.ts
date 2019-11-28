@@ -8,15 +8,24 @@ import { MaterialModule } from './material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { BeautyFeedComponent } from './beauty-feed/beauty-feed.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { HomeComponent } from './home/home.component';
+import { SharedService } from './shared.service';
+import { ProductComponent } from './product/product.component';
+import { SalesPointComponent } from './sales-point/sales-point.component';
+import { BlogComponent } from './blog/blog.component';
+import { ContactComponent } from './contact/contact.component';
+import { MyStoryComponent } from './my-story/my-story.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    BeautyFeedComponent,
-    HomeComponent
+    HomeComponent,
+    ProductComponent,
+    SalesPointComponent,
+    BlogComponent,
+    ContactComponent,
+    MyStoryComponent
   ],
   imports: [
     BrowserModule,
@@ -29,6 +38,7 @@ import { HomeComponent } from './home/home.component';
     ReactiveFormsModule
   ],
   providers: [
+    SharedService,
     // , { provide: HTTP_INTERCEPTORS, useClass: InterceptService, multi: true }
     { provide: LocationStrategy, useClass: HashLocationStrategy }
   ],

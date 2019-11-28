@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, HostBinding } from '@angular/core';
+import { SharedService } from './shared.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Gaia Naturelle';
+  @HostBinding('attr.class') role = 'vbox viewport';
+  constructor(public sharedService: SharedService) { }
 }

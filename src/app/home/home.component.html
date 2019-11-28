@@ -44,12 +44,12 @@
             <h2>FEATURE PRODUCTS</h2>
         </div>
         <div style="display: inline;">
-            <div fxFlex.md="50%" fxFlex.xs="100%" style="display: inline-block;">
+            <div *ngFor="let prod of products" fxFlex.md="50%" fxFlex.xs="100%" style="display: inline-block;">
                 <div class="inner-protein">
-                    <a href="/categories/proteins?navKey=CL-1703">
-                        <img class="lazy" data-original="Collagen shot" alt="Collagen shot" style="display: inline;"
-                            src="../../assets/GAIA_NATURELLE_1600x1600-300x300.jpg">
-                        <p class="product-name">Collagen shot</p>
+                    <a [href]="prod.url">
+                        <img class="lazy" [alt]="prod.name" style="display: inline;"
+                            [src]="prod.image_link">
+                        <p class="product-name" [innerHtml]="prod.name"></p>
                     </a>
                     <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
                         <button class="add_to_cart_btn" mat-raised-button color="primary">
@@ -114,8 +114,8 @@
 <hr style="border: 1px solid #ddd;">
 <section id="mb-ourstory">
     <div class="page-container">
-        <h3>Journey of becoming leading Sports Nutrition Brand</h3>
-        <h2>OUR STORY</h2>
+        <!-- <h3>Journey of becoming leading Sports Nutrition Brand</h3> -->
+        <h2>MY STORY</h2>
         <p>More than half of sports supplements sold are fake<sup>*</sup>. Besides, it is extremely difficult
             to identify them. In a market flooded with counterfeit, unregistered and low quality supplements.
             GaiaNuterella<sup>TM</sup> founded in 2012 has quickly become consumer"s favourite , as the brand assures
@@ -541,11 +541,7 @@
             <div class="mb-footer-left">
                 <div class="mb-footerlinks">
                     <ul>
-                        <li><a href="/mb/AboutUsMB.action">About Us</a></li>
-                        <li><a href="/articles/Diet?itracker=w:emenu|;p:2|;c:diet|;">Blog</a></li>
-                        <li><a href="/mb/FAQ.action">Faqs</a></li>
-                        <li><a href="/mb/TermsConditions.action">T&amp;C</a></li>
-                        <li><a href="/tradepartners">Trade Partners</a></li>
+                        <li *ngFor="let menu of sharedService.menuLinks"><a href="/mb/AboutUsMB.action" [innerHtml]="menu.name"></a></li>
                     </ul>
                 </div>
                 <div class="mb-address">
@@ -611,7 +607,3 @@
         </div>
     </div>
 </footer>
-<!-- <div>
-    <div>Disclaimer</div>
-    <div>Important Notice</div>
-</div> -->
