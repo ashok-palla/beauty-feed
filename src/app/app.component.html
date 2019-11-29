@@ -2,7 +2,8 @@
     <div class="toolbar" role="banner">
         <div fxLayout="row" fxFlex>
             <div fxFlex="20%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="start center">
-                <i fxHide fxShow.lt-md class="link-icon material-icons" (click)="hideMenu = !hideMenu">menu</i>&nbsp;&nbsp;
+                <i fxHide fxShow.lt-md class="link-icon material-icons"
+                    (click)="hideMenu = !hideMenu">menu</i>&nbsp;&nbsp;
                 <img routerLink="" style="cursor: pointer;" width="150" alt="gaia naturelle" src="assets/logo.png" />
             </div>
             <div fxFlex="58%" fxHide fxShow.gt-sm fxLayoutGap="20px" fxLayout="row" fxLayoutAlign="start center">
@@ -26,7 +27,8 @@
         </div>
     </div>
     <mat-list fxHide fxShow.lt-md role="list" *ngIf="hideMenu" class="mobile-menu">
-        <mat-list-item (click)="hideMenu = !hideMenu" [routerLink]="menu.link" role="listitem" *ngFor="let menu of sharedService.menuLinks" class="menu-links">
+        <mat-list-item (click)="hideMenu = !hideMenu" [routerLink]="menu.link" role="listitem"
+            *ngFor="let menu of sharedService.menuLinks" class="menu-links">
             <a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" [routerLink]="menu.link"
                 [innerHtml]="menu.name"></a>
         </mat-list-item>
