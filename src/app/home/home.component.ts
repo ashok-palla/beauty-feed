@@ -23,25 +23,7 @@ export class HomeComponent implements OnInit {
       image_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
       url: '#/product/1',
       mrp: 2990,
-      offer_price: 500,
-      currency: 'EUR'
-    },
-    {
-      name: 'Collagen Shot',
-      image_original_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
-      image_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
-      url: '#/product/1',
-      mrp: 2990,
-      offer_price: 500,
-      currency: 'EUR'
-    },
-    {
-      name: 'Collagen Shot',
-      image_original_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
-      image_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
-      url: '#/product/1',
-      mrp: 2990,
-      offer_price: 500,
+      offer_price: 50,
       currency: 'EUR'
     }
   ];

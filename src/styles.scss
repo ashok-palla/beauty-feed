@@ -31,9 +31,11 @@ $color-primary: #a78949;
 $color-secondary: #dfc06e;
 $color-three: #233242;
 $color-four: gold;
+
 * {
     outline: 0;
 }
+
 html,
 body {
     height: 100%;
@@ -381,7 +383,7 @@ footer {
 
 .mb-footer-left {
     float: left;
-    width:100%;
+    width: 100%;
 }
 
 #mb-footer .footer-top .mb-footerlinks {
@@ -645,9 +647,18 @@ a {
     font-weight: bold;
 }
 
-.price-tag > .price {
+.price-tag>.price {
     color: $color-primary;
 }
-.price-tag > .offer {
+
+.price-tag>.offer {
     color: #ddd;
+}
+
+.offer-tag {
+    position: absolute;
+    transform: translate(-9px, 0px);
+    background-color: $color-secondary;
+    padding: 5px;
+    color: white;
 }
