@@ -47,8 +47,7 @@
             <div *ngFor="let prod of products" style="display: inline-block;">
                 <div class="inner-protein">
                     <a [href]="prod.url">
-                        <img class="lazy" [alt]="prod.name" style="display: inline;"
-                            [src]="prod.image_link">
+                        <img class="lazy" [alt]="prod.name" style="display: inline;" [src]="prod.image_link">
                         <p class="product-name" [innerHtml]="prod.name"></p>
                     </a>
                     <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
@@ -533,51 +532,3 @@
         </div>
     </div>
 </section> -->
-<footer id="mb-footer">
-    <div class="footer-top">
-        <div class="page-container">
-            <div class="mb-footer-left">
-                <div class="mb-footerlinks">
-                    <ul>
-                        <li *ngFor="let menu of sharedService.menuLinks"><a href="/mb/AboutUsMB.action" [innerHtml]="menu.name"></a></li>
-                    </ul>
-                </div>
-                <div fxShow.gt-sm class="mb-address">
-                    <h3>Contact us</h3>
-                    <address>
-                        +91 99 999 99 999<br>
-                        <a href="mailto:info@gaianaturelle.com">info@gaianaturelle.com</a>
-                    </address>
-                </div>
-                <div class="mb-sociallinks" fxLayout="column" fxLayout.gt-md="row">
-                    <span fxLayoutAlign="start center"><h3>connect with us</h3></span>
-                    <ul class="social-links">
-                        <li><a href="https://www.facebook.com/Gaia Nuterella" target="_blank" class="facebook"></a></li>
-                        <li><a href="https://twitter.com/Gaia Nuterella" target="_blank" class="twitter"></a> </li>
-                        <li><a href="https://instagram.com/Gaia Nuterella/" target="_blank" class="instagram"></a> </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="footer-bottom" style="color: black;">
-        <div class="page-container">
-            <div class="disclaimer">
-                <p>
-                    <strong>Disclaimer</strong>:All Gaia Nuterella products are manufactured at FSSAI approved
-                    manufacturing facilities and are not intended to diagnose, treat, cure, or prevent any disease.
-                    Please read product packaging carefully prior to purchase and use.The information/articles on
-                    Gaia Nuterella (www.GaiaNuterella.com or subdomains) is provided for informational purpose only and
-                    is
-                    not meant to substitute for the advice provided by your doctor or other healthcare professional.
-                    These statements are not ratified by any government agency and are for general guidance only.
-                </p>
-                <p><strong>Important Notice</strong>:This is to bring to your notice that we are in the process of
-                    changing our MRPs for select Whey Products. Given, we are present in multiple channels, you might
-                    find products with higher MRPs as well, especially in offline channels. However, keeping consumer
-                    interest in mind we have decided to pass on the benefit of revised MRPs with immediate effect.</p>
-                <p>Copyright 2019 gaianuterella.com</p>
-            </div>
-        </div>
-    </div>
-</footer>
