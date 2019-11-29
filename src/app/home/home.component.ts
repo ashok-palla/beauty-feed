@@ -21,7 +21,28 @@ export class HomeComponent implements OnInit {
       name: 'Collagen Shot',
       image_original_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
       image_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
-      url: '#/product/1'
+      url: '#/product/1',
+      mrp: 2990,
+      offer_price: 500,
+      currency: 'EUR'
+    },
+    {
+      name: 'Collagen Shot',
+      image_original_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
+      image_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
+      url: '#/product/1',
+      mrp: 2990,
+      offer_price: 500,
+      currency: 'EUR'
+    },
+    {
+      name: 'Collagen Shot',
+      image_original_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
+      image_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
+      url: '#/product/1',
+      mrp: 2990,
+      offer_price: 500,
+      currency: 'EUR'
     }
   ];
   @HostBinding('attr.class') role = 'vbox viewport margin_on_top';

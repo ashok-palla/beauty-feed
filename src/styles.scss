@@ -640,3 +640,14 @@ a {
 .active-link {
     color: gold !important;
 }
+
+.price-tag {
+    font-weight: bold;
+}
+
+.price-tag > .price {
+    color: $color-primary;
+}
+.price-tag > .offer {
+    color: #ddd;
+}
