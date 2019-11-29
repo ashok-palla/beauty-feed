@@ -174,7 +174,7 @@ body .headerimage img {
 }
 
 .toolbar {
-    padding: 10px 20px;
+    padding: 10px 14px;
     color: white;
     background-color: rgba(0, 0, 0, .8);
     position: fixed !important;
@@ -665,4 +665,13 @@ a {
 
 .lazy {
     height: 300px;
+}
+
+.mobile-menu {
+    margin-top: 51px;
+}
+
+.mobile-menu > mat-list-item  {
+    height: 35px !important;
+    border-bottom: 1px solid #ddd;
 }

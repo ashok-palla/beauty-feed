@@ -8,6 +8,7 @@ import { SharedService } from './shared.service';
 })
 export class AppComponent {
   title = 'Gaia Naturelle';
+  hideMenu = true;
   @HostBinding('attr.class') role = 'vbox viewport';
   constructor(public sharedService: SharedService) { }
 }
