@@ -1,20 +1,26 @@
 <div fxFlex>
     <div class="toolbar" role="banner">
         <div fxLayout="row" fxFlex>
-            <div routerLink=""  fxFlex="20%" fxFlex.lt-md="50%" fxLayout="row">
+            <div routerLink="" fxFlex="20%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="start center">
+                <i fxHide fxShow.lt-md class="link-icon material-icons">menu</i>&nbsp;&nbsp;
                 <img style="cursor: pointer;" width="150" alt="gaia naturelle" src="assets/logo.png" />
             </div>
-            <div fxFlex="60%" fxHide fxShow.gt-sm fxLayoutGap="20px" fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="58%" fxHide fxShow.gt-sm fxLayoutGap="20px" fxLayout="row" fxLayoutAlign="start center">
                 <span *ngFor="let menu of sharedService.menuLinks" class="menu-links">
                     <a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" [routerLink]="menu.link"
                         [innerHtml]="menu.name"></a>
                 </span>
             </div>
-            <div fxFlex="20%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="end center">
-                <span class="login_and_signup">Login & Sign Up</span>
+            <div fxFlex="22%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="end center">
+                <span class="login_and_signup" fxLayoutAlign="center center">
+                    <i fxShow.lt-md fxHide class="material-icons">person</i>
+                    <span fxHide fxShow.gt-sm>Login & Signup</span>
+                </span>
                 <span fxFlex="20px"></span>
-                <i class="link-icon material-icons" style="color: white;">shopping_cart</i>
-                &nbsp;Cart
+                <span class="link-icon" fxLayoutAlign="center center">
+                    <i class="material-icons" style="color: white;">shopping_cart</i>
+                    <span fxHide fxShow.gt-sm>&nbsp;Cart</span>
+                </span>
                 <span class="mL fnt-sz10 item-count" data-role="cart-counter">0</span>
             </div>
         </div>

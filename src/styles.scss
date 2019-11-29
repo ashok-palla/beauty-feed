@@ -379,18 +379,18 @@ footer {
 
 .mb-footer-left {
     float: left;
-    width: 66.66%;
+    width:100%;
 }
 
 #mb-footer .footer-top .mb-footerlinks {
     text-align: left;
     float: left;
-    width: 30%;
+    width: 50%;
 }
 
 #mb-footer .footer-top .mb-address {
     float: left;
-    width: 30%;
+    width: 50%;
 }
 
 #mb-footer .footer-top .mb-address address a {
@@ -509,6 +509,12 @@ ul {
     font-family: Roboto, sans-serif;
 }
 
+@media only screen and (max-width: 1000px) {
+    .item-count {
+        right: 14px !important;
+    }
+}
+
 .item-count {
     position: absolute;
     top: 5px;
@@ -519,7 +525,7 @@ ul {
     border-radius: 5px;
     width: auto;
     height: auto;
-    color: #000;
+    color: #000 !important;
     text-align: center;
     box-sizing: border-box;
     padding: 0 5px;
