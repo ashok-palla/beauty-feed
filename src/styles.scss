@@ -710,9 +710,15 @@ a {
 }
 
 .container {
-    width: 1170px;
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .container {
+        margin-right: 15px;
+        margin-left: 15px;
+    }
 }
 
 .testmo {
