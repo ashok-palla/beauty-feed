@@ -1,9 +1,9 @@
 <div fxFlex fxLayout="column">
     <div class="toolbar" role="banner">
         <div fxLayout="row" fxFlex>
-            <div routerLink="" fxFlex="20%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="start center">
+            <div fxFlex="20%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="start center">
                 <i fxHide fxShow.lt-md class="link-icon material-icons" (click)="hideMenu = !hideMenu">menu</i>&nbsp;&nbsp;
-                <img style="cursor: pointer;" width="150" alt="gaia naturelle" src="assets/logo.png" />
+                <img routerLink="" style="cursor: pointer;" width="150" alt="gaia naturelle" src="assets/logo.png" />
             </div>
             <div fxFlex="58%" fxHide fxShow.gt-sm fxLayoutGap="20px" fxLayout="row" fxLayoutAlign="start center">
                 <span *ngFor="let menu of sharedService.menuLinks" class="menu-links">
