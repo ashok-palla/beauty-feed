@@ -31,7 +31,9 @@ $color-primary: #a78949;
 $color-secondary: #dfc06e;
 $color-three: #233242;
 $color-four: gold;
-
+* {
+    outline: 0;
+}
 html,
 body {
     height: 100%;
