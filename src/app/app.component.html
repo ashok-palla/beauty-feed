@@ -26,7 +26,7 @@
         </div>
     </div>
     <mat-list fxHide fxShow.lt-md role="list" *ngIf="hideMenu" class="mobile-menu">
-        <mat-list-item [routerLink]="menu.link" role="listitem" *ngFor="let menu of sharedService.menuLinks" class="menu-links">
+        <mat-list-item (click)="hideMenu = !hideMenu" [routerLink]="menu.link" role="listitem" *ngFor="let menu of sharedService.menuLinks" class="menu-links">
             <a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" [routerLink]="menu.link"
                 [innerHtml]="menu.name"></a>
         </mat-list-item>
