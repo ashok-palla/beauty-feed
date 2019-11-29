@@ -14,43 +14,38 @@
     </div>
 </div>
 <section id="mb-categories">
-    <!-- <div class="page-container center-align">
+    <div class="page-container center-align">
+        <div class="category-head">
+            <h2>FEATURE CATEGORIES</h2>
+        </div>
+        <div style="display: inline;">
+            <div *ngFor="let prod of category" style="display: inline-block;">
+                <div class="inner-protein">
+                    <a [href]="prod.url">
+                        <img class="lazy" [alt]="prod.name" style="display: inline;" [src]="prod.image_link">
+                        <p class="product-name" [innerHtml]="prod.name"></p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-container center-align">
         <div class="category-head">
             <h2>FEATURED PRODUCTS</h2>
         </div>
         <div style="display: inline;">
-            <div fxFlex.md="50%" fxFlex.xs="100%" style="display: inline-block;">
-                <div class="inner-protein">
-                    <a href="/categories/proteins?navKey=CL-1703">
-                        <img class="lazy" data-original="../../assets/Hyaluron-Face-Cream-300x300.png" alt="ShotCa"
-                            style="display: inline;" src="../../assets/Hyaluron-Face-Cream-300x300.png">
-                        <p class="blog-name">Creams</p>
-                    </a>
-                </div>
-            </div>
-            <div fxFlex.md="50%" fxFlex.xs="100%" style="display: inline-block;">
-                <div class="inner-protein">
-                    <a href="/categories/proteins?navKey=CL-1703">
-                        <img class="lazy" data-original="../../assets/0005-300x300.jpg" alt="ShotCa"
-                            style="display: inline;" src="../../assets/0005-300x300.jpg">
-                        <p class="blog-name">ShotCa</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <div class="page-container center-align">
-        <div class="category-head">
-            <h2>FEATURE PRODUCTS</h2>
-        </div>
-        <div style="display: inline;">
             <div *ngFor="let prod of products" style="display: inline-block;">
                 <div class="inner-protein">
-                    <div class="offer-tag" *ngIf="prod.offer_price > 0">{{prod.offer_price/prod.mrp | percent}} OFF</div>
+                    <div class="offer-tag" *ngIf="prod.offer_price > 0">{{prod.offer_price/prod.mrp | percent}} OFF
+                    </div>
                     <a [href]="prod.url">
                         <img class="lazy" [alt]="prod.name" style="display: inline;" [src]="prod.image_link">
                         <p class="product-name" [innerHtml]="prod.name"></p>
-                        <div class="price-tag" fxLayoutGap="20px"><span class="price">{{(prod.mrp - prod.offer_price) | currency: prod.currency : 'symbol' : '1.0-0'}}</span><del class="offer" *ngIf="prod.offer_price > 0">{{prod.mrp | currency:prod.currency : 'symbol' : '1.0-0'}}</del></div>
+                        <div class="price-tag" fxLayoutGap="20px"><span
+                                class="price">{{(prod.mrp - prod.offer_price) | currency: prod.currency : 'symbol' : '1.0-0'}}</span><del
+                                class="offer"
+                                *ngIf="prod.offer_price > 0">{{prod.mrp | currency:prod.currency : 'symbol' : '1.0-0'}}</del>
+                        </div>
                     </a>
                     <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
                         <button class="add_to_cart_btn" mat-raised-button color="primary">
@@ -65,50 +60,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <div fxFlex.md="50%" fxFlex.xs="100%" style="display: inline-block;">
-                <div class="inner-protein">
-                    <a href="/categories/proteins?navKey=CL-1703">
-                        <img class="lazy"
-                            data-original="Creams"
-                            alt=" Creams" style="display: inline;"
-                            src="../../assets/Hyaluron-Face-Cream-300x300.png">
-                        <p class="product-name">Creams</p>
-                    </a>
-                    <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
-                        <button class="add_to_cart_btn" mat-raised-button color="primary">
-                            <i class="material-icons">shopping_cart</i>&nbsp;
-                            ADD TO CART
-                        </button>
-                        <span fxFlex="20px"></span>
-                        <button class="buy_now_btn" mat-raised-button color="accent">
-                            <i class="material-icons">credit_card</i>&nbsp;
-                            BUY NOW
-                        </button>
-                    </div>
-                </div>
-            </div>
-            <div fxFlex.md="50%" fxFlex.xs="100%" style="display: inline-block;">
-                <div class="inner-protein">
-                    <a href="/categories/proteins?navKey=CL-1703">
-                        <img class="lazy"
-                            data-original="ShotCa"
-                            alt="ShotCa" style="display: inline;"
-                            src="../../assets/0005-300x300.jpg">
-                        <p class="product-name">ShotCa</p>
-                    </a>
-                    <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
-                        <button class="add_to_cart_btn" mat-raised-button color="primary">
-                            <i class="material-icons">shopping_cart</i>&nbsp;
-                            ADD TO CART
-                        </button>
-                        <span fxFlex="20px"></span>
-                        <button class="buy_now_btn" mat-raised-button color="accent">
-                            <i class="material-icons">credit_card</i>&nbsp;
-                            BUY NOW
-                        </button>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </section>
