@@ -63,3 +63,69 @@
         </div>
     </div>
 </section>
+<section style="background-color: #f5f5f5;">
+    <div class="container main-block">
+        <div class="border-line"></div>
+        <h2 class="nav-name">TESTIMONIALS</h2>
+    </div>
+    <div class="container" style="margin-bottom: 10px;">
+        <div class="testmo">
+            <div style="color: gold;">
+                <i class="material-icons" *ngIf="TESTIMONIALS[0].rating >= 1">star</i>
+                <i class="material-icons" *ngIf="1 > TESTIMONIALS[0].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[0].rating >= 2">star</i>
+                <i class="material-icons" *ngIf="2 > TESTIMONIALS[0].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[0].rating >= 3">star</i>
+                <i class="material-icons" *ngIf="3 > TESTIMONIALS[0].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[0].rating >= 4">star</i>
+                <i class="material-icons" *ngIf="4 > TESTIMONIALS[0].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[0].rating >= 5">star</i>
+                <i class="material-icons" *ngIf="5 > TESTIMONIALS[0].rating">star_border</i>
+            </div>
+            <div style="margin-bottom: 10px;" [innerHtml]="TESTIMONIALS[0].description"></div>
+            <b>-<span [innerHtml]="TESTIMONIALS[0].name"></span></b>
+        </div>
+    </div>
+    <div class="container" style="margin-bottom: 10px;">
+        <div class="testmo">
+            <div style="color: gold;">
+                <i class="material-icons" *ngIf="TESTIMONIALS[1].rating >= 1">star</i>
+                <i class="material-icons" *ngIf="1 > TESTIMONIALS[1].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[1].rating >= 2">star</i>
+                <i class="material-icons" *ngIf="2 > TESTIMONIALS[1].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[1].rating >= 3">star</i>
+                <i class="material-icons" *ngIf="3 > TESTIMONIALS[1].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[1].rating >= 4">star</i>
+                <i class="material-icons" *ngIf="4 > TESTIMONIALS[1].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[1].rating >= 5">star</i>
+                <i class="material-icons" *ngIf="5 > TESTIMONIALS[1].rating">star_border</i>
+            </div>
+            <div style="margin-bottom: 10px;" [innerHtml]="TESTIMONIALS[1].description"></div>
+            <b>-<span [innerHtml]="TESTIMONIALS[1].name"></span></b>
+        </div>
+    </div>
+    <div class="container" style="margin-bottom: 10px;">
+        <div class="testmo">
+            <div style="color: gold;">
+                <i class="material-icons" *ngIf="TESTIMONIALS[2].rating >= 1">star</i>
+                <i class="material-icons" *ngIf="1 > TESTIMONIALS[2].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[2].rating >= 2">star</i>
+                <i class="material-icons" *ngIf="2 > TESTIMONIALS[2].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[2].rating >= 3">star</i>
+                <i class="material-icons" *ngIf="3 > TESTIMONIALS[2].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[2].rating >= 4">star</i>
+                <i class="material-icons" *ngIf="4 > TESTIMONIALS[2].rating">star_border</i>
+                <i class="material-icons" *ngIf="TESTIMONIALS[2].rating >= 5">star</i>
+                <i class="material-icons" *ngIf="5 > TESTIMONIALS[2].rating">star_border</i>
+            </div>
+            <div style="margin-bottom: 10px;" [innerHtml]="TESTIMONIALS[2].description"></div>
+            <b>-<span [innerHtml]="TESTIMONIALS[2].name"></span></b>
+        </div>
+    </div>
+</section>
+<section style="background-color: #f5f5f5;">
+    <div class="container main-block">
+        <div class="border-line"></div>
+        <h2 class="nav-name">BLOG</h2>
+    </div>
+</section>
