@@ -30,6 +30,20 @@ export class HomeComponent implements OnInit {
       url: '#/product/1',
     }
   ];
+  public blogs = [
+    {
+      name: 'Production of natural cosmetics',
+      image_original_link: 'assets/izrada-prirodne-kozmetike-1-800x178.jpg',
+      image_link: 'assets/izrada-prirodne-kozmetike-1-800x178.jpg',
+      url: '#/product/1',
+    },
+    {
+      name: 'Hydrolyzed collagen, peptides of collagen, collagen precursors, collagen',
+      image_original_link: 'assets/hidrolizirani-kolagen-1-800x178.jpg',
+      image_link: 'assets/hidrolizirani-kolagen-1-800x178.jpg',
+      url: '#/product/1',
+    }
+  ];
   public TESTIMONIALS = [
     {
       rating: 5, description: `I haven't seen nails grow so beautifully and uniformly in a long time. In my opinion, one of the better

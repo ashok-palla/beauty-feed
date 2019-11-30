@@ -862,3 +862,11 @@ a {
     color: #000;
     padding: 10px 15px;
 }
+
+.blog-img {
+    object-fit: contain;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}

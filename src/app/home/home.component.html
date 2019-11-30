@@ -182,16 +182,12 @@
         <div class="border-line"></div>
         <h2 class="nav-name">BLOG</h2>
     </div>
-    <div class="page-container center-align">
-        <div style="display: inline;">
-            <div *ngFor="let prod of category" style="display: inline-block;">
-                <div class="inner-protein">
-                    <a [href]="prod.url">
-                        <img class="lazy" [alt]="prod.name" style="display: inline;" [src]="prod.image_link">
-                        <p class="product-name" [innerHtml]="prod.name"></p>
-                    </a>
-                </div>
-            </div>
-        </div>
+    <div class="page-container center-align" fxLayout="row" fxLayout.lt-md="column">
+        <mat-card *ngFor="let blog of blogs" style="width: 300px; margin: 10px;">
+            <img mat-card-image [src]="blog.image_link" [alt]="blog.name">
+            <mat-card-content>
+                <p>{{blog.name}}</p>
+            </mat-card-content>
+        </mat-card>
     </div>
 </section>
