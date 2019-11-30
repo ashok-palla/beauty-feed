@@ -117,4 +117,13 @@ export class HomeComponent implements OnInit {
     }
     this.testmoPagination();
   }
+  decreaseTestmoPagination() {
+    const length = this.TESTIMONIALS.length;
+    const totalNoOfPages = Math.ceil(length / this.testmoPerPage);
+    this.testmoPageSelected--;
+    if (1 === this.testmoPageSelected) {
+      this.testmoPageSelected = totalNoOfPages;
+    }
+    this.testmoPagination();
+  }
 }

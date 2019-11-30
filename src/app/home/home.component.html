@@ -110,11 +110,12 @@
         </div>
     </div>
 </section>
-<section style="background-color: #f5f5f5;" (mouseenter)="testmoClearTimer()" (mouseleave)="testmoInterval()">
+<section style="background-color: #f5f5f5;" (swipeleft)="increseTestmoPagination()" (swiperight)="decreaseTestmoPagination()"
+    (mouseenter)="testmoClearTimer()" (mouseleave)="testmoInterval()">
     <div class="container main-block">
         <div class="border-line"></div>
         <h2 class="nav-name">TESTIMONIALS</h2>
-    </div> 
+    </div>
     <div class="container" style="margin-bottom: 10px;" *ngFor="let testmo of textmoDisplayArray">
         <div class="testmo">
             <div style="color: gold;">
