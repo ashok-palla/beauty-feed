@@ -17,11 +17,9 @@ export class SharedService {
             images: [
                 'assets/00003.jpg',
                 'assets/BackUp/11.jpg',
-                'assets/BackUp/12.jpg',
                 'assets/BackUp/13.jpg',
                 'assets/BackUp/14.jpg',
                 'assets/BackUp/15.jpg',
-                'assets/BackUp/16.jpg',
                 'assets/BackUp/18.jpg'
             ],
             url: '#/product/1',
