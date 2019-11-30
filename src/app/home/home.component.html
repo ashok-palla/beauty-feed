@@ -62,6 +62,30 @@
             </div>
         </div>
     </div>
+    <div class="page-container center-align">
+        <div class="container main-block">
+            <div class="border-line"></div>
+            <h2 class="nav-name" style="width: 420px; text-transform: none; background-color: white;">Benefits of
+                Collagen shot </h2>
+        </div>
+        <div style="display: inline;">
+            <div *ngFor="let benefits of sharedService.collegenshotbenefits" style="display: inline-block;">
+                <div class="benefits-inner-protein">
+                    <div class="benefits-img-holder">
+                        <img [style.height.px]="benefits.height" [alt]="benefits.image_url" style="display: inline;"
+                            [src]="benefits.image_url">
+                    </div>
+                    <h2 class="benefit-name" [innerHtml]="benefits.title"></h2>
+                    <p class="benefit-description" [innerHtml]="benefits.description"></p>
+                    <!-- <div class="price-tag" fxLayoutGap="20px"><span
+                            class="price">{{(benefits.mrp - prod.offer_price) | currency: prod.currency : 'symbol' : '1.0-0'}}</span><del
+                            class="offer"
+                            *ngIf="prod.offer_price > 0">{{prod.mrp | currency:prod.currency : 'symbol' : '1.0-0'}}</del>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 <section style="background-color: #f5f5f5;" (mouseenter)="testmoClearTimer()" (mouseleave)="testmoInterval()">
     <div class="container main-block">
@@ -89,7 +113,8 @@
     <div fxLayoutAlign="center center" class="pagination">
         <div [class.page-index-circle]="testmoPageSelected !== pagination"
             [class.page-index-fill]="testmoPageSelected === pagination"
-            *ngFor="let pagination of testmoPaginationArray; let i = index;" (click)="testmoPageSelected = pagination; testmoPagination()"></div>
+            *ngFor="let pagination of testmoPaginationArray; let i = index;"
+            (click)="testmoPageSelected = pagination; testmoPagination()"></div>
     </div>
 </section>
 <section id="mb-categories" style="background-color: #f5f5f5;">

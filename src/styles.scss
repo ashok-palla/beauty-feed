@@ -258,7 +258,7 @@ body .headerimage img {
 }
 
 .page-container {
-    max-width: 1170px;
+    // max-width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -730,4 +730,26 @@ a {
 
 .hide-menu {
     display: none !important;
+}
+
+.benefits-img-holder {
+    height: 100px;
+}
+
+.benefits-inner-protein {
+    width: 270px;
+    margin-bottom: 20px;
+    padding: 5px 14px;
+    margin: 5px;
+}
+
+.benefit-name {
+    color: #012755;
+    font-weight: 500;
+    text-align: left;
+}
+
+.benefit-description {
+    text-align: center;
+    display: flex;
 }
