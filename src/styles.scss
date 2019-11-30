@@ -516,14 +516,14 @@ ul {
 
 @media only screen and (max-width: 1000px) {
     .item-count {
-        right: 14px !important;
+        right: 9px !important;
     }
 }
 
 .item-count {
     position: absolute;
     top: 5px;
-    right: 52px;
+    right: 47px;
     transform: translatex(-50%);
     font-size: 10px !important;
     background-color: $color-four;

@@ -103,14 +103,14 @@ export class HomeComponent implements OnInit {
   }
   getSliderData() { this.timer = setInterval(() => { this.increment(); }, 4000); }
   clearTimer() { clearInterval(this.timer); }
-  decrement() {
+  increment() {
     if (this.pageIndex === (this.imageArray.length - 1)) {
       this.pageIndex = 0;
       return;
     }
     this.pageIndex++;
   }
-  increment() {
+  decrement() {
     if (this.pageIndex === 0) {
       this.pageIndex = this.imageArray.length - 1;
       return;

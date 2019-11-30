@@ -1,10 +1,10 @@
 <div class="slider" fxLayout="column" [style.background]="'url('+imageArray[pageIndex]+')'" (mouseenter)="clearTimer()"
     (mouseleave)="getSliderData()">
     <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
-        <div fxHide fxShow.gt-sm fxLayoutAlign="center center" class="slider-nav-arrow" (click)="increment()">
+        <div fxHide fxShow.gt-sm fxLayoutAlign="center center" class="slider-nav-arrow" (click)="decrement()">
             <i class="material-icons">arrow_back_ios</i>
         </div>
-        <div fxHide fxShow.gt-sm fxLayoutAlign="center center" class="slider-nav-arrow" (click)="decrement()">
+        <div fxHide fxShow.gt-sm fxLayoutAlign="center center" class="slider-nav-arrow" (click)="increment()">
             <i class="material-icons">arrow_forward_ios</i>
         </div>
     </div>
