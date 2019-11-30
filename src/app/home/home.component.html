@@ -34,7 +34,7 @@
             <h2>FEATURED PRODUCTS</h2>
         </div>
         <div style="display: inline;">
-            <div *ngFor="let prod of products" style="display: inline-block;">
+            <div *ngFor="let prod of sharedService.products" style="display: inline-block;">
                 <div class="inner-protein">
                     <div class="offer-tag" *ngIf="prod.offer_price > 0">{{prod.offer_price/prod.mrp | percent}} OFF
                     </div>

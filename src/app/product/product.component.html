@@ -1,1 +1,50 @@
-<p>product works!</p>
+<div fxFlex style="padding: 0 15px; padding-top: 50px;">
+    <div fxLayout="row" fxLayout.lt-md="column">
+        <div fxLayout="row">
+            <div fxLayout="column">
+                <img [class.selected-image]="prod.image_link == img" (click)="prod.image_link = img" class="thumbmails" [alt]="prod.name" style="display: inline;" [src]="img"
+                    *ngFor="let img of prod.images">
+            </div>
+            <div fxLayoutAlign="center center" style="width: 420px; height: 420px; overflow: hidden;">
+                <img class="preview-img" [alt]="prod.name" style="display: inline;"
+                    [src]="prod.image_link">
+            </div>
+        </div>
+        <div fxLayout="column" fxFlex>
+            <h1 class="product-name" [innerHtml]="prod.name"></h1>
+            <div>
+                <span class="product-offer-tag" *ngIf="prod.offer_price > 0">{{prod.offer_price/prod.mrp | percent}}
+                    OFF</span>
+            </div>
+            <dd class="product-price">
+                <div class="price-tag" fxLayoutGap="20px">
+                    <span
+                        class="price">{{(prod?.mrp - prod?.offer_price) | currency: prod?.currency : 'symbol' : '1.0-0'}}</span><del
+                        class="offer"
+                        *ngIf="prod?.offer_price > 0">{{prod?.mrp | currency:prod?.currency : 'symbol' : '1.0-0'}}</del>
+                </div>
+            </dd>
+            <div>
+                <div>Quantity: </div>
+                <div style="display: inline;">
+                    <div class="product-quantity" [class.out-of-stock]="!quanti.in_stock"
+                        [class.selected-quantity]="quantity == quanti.qua" *ngFor="let quanti of prod.quantity">
+                        {{quanti.qua}}&nbsp;{{prod.measure}}</div>
+                </div>
+            </div>
+            <div class="product-buttons">
+                <div fxLayout="row" fxLayoutAlign="start center" style="margin: 10px 0;">
+                    <button class="add_to_cart_btn" mat-raised-button color="primary">
+                        <i class="material-icons">shopping_cart</i>&nbsp;
+                        ADD TO CART
+                    </button>
+                    <span fxFlex="20px"></span>
+                    <button class="buy_now_btn" mat-raised-button color="accent">
+                        <i class="material-icons">credit_card</i>&nbsp;
+                        BUY NOW
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

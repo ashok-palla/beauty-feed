@@ -9,6 +9,48 @@ export class SharedService {
         { name: 'Blog', link: 'blog' },
         { name: 'Contact', link: 'contact' },
     ];
+    public products = [
+        {
+            name: 'Collagen Shot',
+            image_original_link: 'assets/00003.jpg',
+            image_link: 'assets/00003.jpg',
+            images: [
+                'assets/00003.jpg',
+                'assets/BackUp/11.jpg',
+                'assets/BackUp/12.jpg',
+                'assets/BackUp/13.jpg',
+                'assets/BackUp/14.jpg'
+            ],
+            url: '#/product/1',
+            mrp: 2990,
+            offer_price: 50,
+            currency: 'EUR',
+            quantity: [
+                // { qua: 250, in_stock: false },
+                { qua: 500, in_stock: true }
+            ],
+            measure: 'ML'
+        }
+        // ,
+        // {
+        //   name: 'Hyaluron Face Cream',
+        //   image_original_link: 'assets/00001.jpg',
+        //   image_link: 'assets/00001.jpg',
+        //   url: '#/product/1',
+        //   mrp: 2440,
+        //   offer_price: 732,
+        //   currency: 'EUR'
+        // },
+        // {
+        //   name: 'ShotCa',
+        //   image_original_link: 'assets/00008.jpg',
+        //   image_link: 'assets/00008.jpg',
+        //   url: '#/product/1',
+        //   mrp: 2190,
+        //   offer_price: 657,
+        //   currency: 'EUR'
+        // }
+    ];
     public collegenshotbenefits = [
         {
             title: 'Fish collagen',

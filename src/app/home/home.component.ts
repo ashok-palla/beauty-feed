@@ -30,36 +30,6 @@ export class HomeComponent implements OnInit {
       url: '#/product/1',
     }
   ];
-  public products = [
-    {
-      name: 'Collagen Shot',
-      image_original_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
-      image_link: 'assets/GAIA_NATURELLE_1600x1600-300x300.jpg',
-      url: '#/product/1',
-      mrp: 2990,
-      offer_price: 50,
-      currency: 'EUR'
-    } 
-    // ,
-    // {
-    //   name: 'Hyaluron Face Cream',
-    //   image_original_link: 'assets/00001.jpg',
-    //   image_link: 'assets/00001.jpg',
-    //   url: '#/product/1',
-    //   mrp: 2440,
-    //   offer_price: 732,
-    //   currency: 'EUR'
-    // },
-    // {
-    //   name: 'ShotCa',
-    //   image_original_link: 'assets/00008.jpg',
-    //   image_link: 'assets/00008.jpg',
-    //   url: '#/product/1',
-    //   mrp: 2190,
-    //   offer_price: 657,
-    //   currency: 'EUR'
-    // }
-  ];
   public TESTIMONIALS = [
     {
       rating: 5, description: `I haven't seen nails grow so beautifully and uniformly in a long time. In my opinion, one of the better
