@@ -39,7 +39,7 @@ export class HomeComponent implements OnInit {
       mrp: 2990,
       offer_price: 50,
       currency: 'EUR'
-    }
+    } 
     // ,
     // {
     //   name: 'Hyaluron Face Cream',
