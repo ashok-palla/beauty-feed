@@ -13,8 +13,8 @@ export class AppComponent {
   constructor(public sharedService: SharedService) { }
   scrollToMenu() {
     if (!this.hideMenu) {
-      document.body.scrollIntoView({ behavior: 'smooth' }); // For Safari
-      document.documentElement.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
   }
 }

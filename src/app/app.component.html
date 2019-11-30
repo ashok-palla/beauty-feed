@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    <mat-list id="menu-scroll-top" fxHide fxShow.lt-md role="list" [class.hide-menu]="hideMenu" class="mobile-menu">
+    <mat-list fxHide fxShow.lt-md role="list" [class.hide-menu]="hideMenu" class="mobile-menu">
         <mat-list-item (click)="hideMenu = !hideMenu" [routerLink]="menu.link" role="listitem"
             *ngFor="let menu of sharedService.menuLinks" class="menu-links">
             <a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" [routerLink]="menu.link"
