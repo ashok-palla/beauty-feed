@@ -121,7 +121,7 @@ export class HomeComponent implements OnInit {
     const length = this.TESTIMONIALS.length;
     const totalNoOfPages = Math.ceil(length / this.testmoPerPage);
     this.testmoPageSelected--;
-    if (1 === this.testmoPageSelected) {
+    if (0 === this.testmoPageSelected) {
       this.testmoPageSelected = totalNoOfPages;
     }
     this.testmoPagination();
