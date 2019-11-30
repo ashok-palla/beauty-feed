@@ -844,6 +844,16 @@ a {
     list-style-type: disc;
 }
 
+.prob-slov {
+    padding: 0;
+}
+
+.prob-slov li {
+    padding-top: 10px;
+    list-style-type: square;
+    text-transform: uppercase;
+}
+
 .mb-authenticity {
     background-image: url('assets/authencity-bg.jpg');
     background-repeat: no-repeat;
