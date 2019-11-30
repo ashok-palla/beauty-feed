@@ -31,7 +31,7 @@ export class SharedService {
             ],
             measure: 'ML'
         }
-        // ,
+        // , 
         // {
         //   name: 'Hyaluron Face Cream',
         //   image_original_link: 'assets/00001.jpg',
