@@ -411,21 +411,9 @@ footer {
     margin-left: 40px;
 }
 
-#mb-footer .footer-top .mb-sociallinks .social-links li a.facebook:hover {
-    background-position: -3px -1px;
-}
-
-#mb-footer .footer-top .mb-sociallinks .social-links li a.facebook {
-    background-position: -3px -37px;
-}
-
 #mb-footer .footer-top .mb-sociallinks .social-links li a {
-    float: left;
     width: 34px;
     height: 34px;
-    background: url('https://img3.hkrtcdn.com/dist-mb/src/main/webapp/assets/images/mbUpdate/social.png') no-repeat;
-    background-position-x: 0%;
-    background-position-y: 0%;
 }
 
 #mb-footer .footer-top .mb-sociallinks .social-links,
@@ -446,20 +434,6 @@ footer {
     text-transform: uppercase;
     font-family: Montserrat;
     font-size: 16px;
-}
-
-#mb-footer .footer-top .mb-sociallinks .social-links,
-#mb-footer .footer-top .mb-sociallinks h3 {
-    display: inline-block;
-    margin: 0;
-    vertical-align: middle;
-}
-
-#mb-footer .footer-top .mb-sociallinks .social-links,
-#mb-footer .footer-top .mb-sociallinks h3 {
-    display: inline-block;
-    margin: 0;
-    vertical-align: middle;
 }
 
 ul {

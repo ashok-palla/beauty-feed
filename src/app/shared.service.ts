@@ -9,6 +9,10 @@ export class SharedService {
         { name: 'Blog', link: 'blog' },
         { name: 'Contact', link: 'contact' },
     ];
+    public socialLinks = [
+        { image_link: 'assets/facebook_circle-512.png', url: 'https://www.facebook.com/gaianaturelle.kolagenshot/' },
+        { image_link: 'assets/insta.png', url: 'https://www.facebook.com/gaianaturelle.kolagenshot/' }
+    ];
     public products = [
         {
             name: 'Collagen Shot',
@@ -17,7 +21,8 @@ export class SharedService {
             image_link: 'assets/00003.jpg',
             images: [
                 'assets/00003.jpg',
-                'assets/BackUp/11.jpg',
+                // tslint:disable-next-line: max-line-length
+                'https://scontent.fhyd2-1.fna.fbcdn.net/v/t1.0-9/77420499_772458963198609_7063862553440419840_n.jpg?_nc_cat=105&_nc_ohc=-3qFUfa7M90AQlP4VU4OsMnvuOCK_495v7VNC5k5me_OKMtuf_jTZSa8A&_nc_ht=scontent.fhyd2-1.fna&oh=5f66ef3cd4273ec4891c87940974ba53&oe=5E7F9861',
                 'assets/BackUp/13.jpg',
                 'assets/BackUp/14.jpg',
                 'assets/BackUp/15.jpg',

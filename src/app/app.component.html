@@ -58,10 +58,9 @@
                             <h3>connect with us</h3>
                         </span>
                         <ul class="social-links">
-                            <li><a href="https://www.facebook.com/Gaia Nuterella" target="_blank" class="facebook"></a>
-                            </li>
-                            <li><a href="https://twitter.com/Gaia Nuterella" target="_blank" class="twitter"></a> </li>
-                            <li><a href="https://instagram.com/Gaia Nuterella/" target="_blank" class="instagram"></a>
+                            <li *ngFor="let social of sharedService.socialLinks"><a [href]="social.url" target="_blank">
+                                    <img [src]="social.image_link" width="34">
+                                </a>
                             </li>
                         </ul>
                     </div>
