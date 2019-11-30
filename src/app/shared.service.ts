@@ -31,13 +31,15 @@ export class SharedService {
             url: '#/product/1',
             mrp: 2990,
             offer_price: 50,
+            offer_description: '<b>Free shipping</b> on order of 2 (or more) products',
             currency: 'EUR',
             quantity: [
                 { qua: 500, in_stock: true }
             ],
-            measure: 'ML'
+            measure: 'ML',
+            in_stock: 142
         }
-        // , 
+        // ,
         // {
         //   name: 'Hyaluron Face Cream',
         //   image_original_link: 'assets/00001.jpg',

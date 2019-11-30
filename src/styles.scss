@@ -31,6 +31,7 @@ $color-primary: #a78949;
 $color-secondary: #dfc06e;
 $color-three: #233242;
 $color-four: gold;
+$paraghaph-font-color: #6e6e64;
 
 * {
     outline: 0;
@@ -727,6 +728,7 @@ a {
 .benefit-description {
     text-align: center;
     display: flex;
+    color: $paraghaph-font-color;
 }
 
 .bg {
@@ -790,6 +792,7 @@ a {
     color: #2874f0;
     box-shadow: none;
 }
+
 .selected-image {
     border-color: $color-primary;
 }
@@ -807,4 +810,31 @@ a {
 .product-buttons {
     margin-top: 25px;
     border-top: 1px solid #e0e0e0;
+}
+
+.stock-details {
+    padding-top: 10px;
+}
+
+.offer-description {
+    margin-top: 10px;
+}
+
+.product-description {
+    text-align: left;
+}
+
+.product-description .benefit-name {
+    text-align: left;
+}
+
+.product-description p,
+.product-description span {
+    color: $paraghaph-font-color;
+}
+
+.free-ingredients {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
 }
