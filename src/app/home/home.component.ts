@@ -10,11 +10,11 @@ export class HomeComponent implements OnInit {
   timer;
   public pageIndex = 0;
   public imageArray = [
-    'assets/I-3.jpg',
     'assets/16.jpg',
     'assets/BackUp/11.jpg',
     'assets/BackUp/12.jpg',
     'assets/BackUp/13.jpg',
+    'assets/I-3.jpg',
     'assets/BackUp/18.jpg'];
   public category = [
     {
@@ -39,25 +39,26 @@ export class HomeComponent implements OnInit {
       mrp: 2990,
       offer_price: 50,
       currency: 'EUR'
-    },
-    {
-      name: 'Hyaluron Face Cream',
-      image_original_link: 'assets/00001.jpg',
-      image_link: 'assets/00001.jpg',
-      url: '#/product/1',
-      mrp: 2440,
-      offer_price: 732,
-      currency: 'EUR'
-    },
-    {
-      name: 'ShotCa',
-      image_original_link: 'assets/00008.jpg',
-      image_link: 'assets/00008.jpg',
-      url: '#/product/1',
-      mrp: 2190,
-      offer_price: 657,
-      currency: 'EUR'
     }
+    // ,
+    // {
+    //   name: 'Hyaluron Face Cream',
+    //   image_original_link: 'assets/00001.jpg',
+    //   image_link: 'assets/00001.jpg',
+    //   url: '#/product/1',
+    //   mrp: 2440,
+    //   offer_price: 732,
+    //   currency: 'EUR'
+    // },
+    // {
+    //   name: 'ShotCa',
+    //   image_original_link: 'assets/00008.jpg',
+    //   image_link: 'assets/00008.jpg',
+    //   url: '#/product/1',
+    //   mrp: 2190,
+    //   offer_price: 657,
+    //   currency: 'EUR'
+    // }
   ];
   public TESTIMONIALS = [
     {
