@@ -64,7 +64,7 @@
     </div>
     <div class="page-container center-align">
         <div class="category-head">
-            <h2>Benefits of Collagen shot </h2>
+            <h2>Benefits of Collagen Shot </h2>
         </div>
         <div style="display: inline;">
             <div *ngFor="let benefits of sharedService.collegenshotbenefits" style="display: inline-block;">
@@ -76,6 +76,36 @@
                     <h2 class="benefit-name" [innerHtml]="benefits.title"></h2>
                     <p class="benefit-description" [innerHtml]="benefits.description"></p>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-container mb-authenticity">
+        <div>
+            <h2>WHY COLLAGEN?</h2>
+        </div>
+        <div fxLayout="row" fxLayout.lt-md="column">
+            <ul class="why-collagen">
+                <li>Collagen is the glue that holds your entire body together.</li>
+                <li>Collagen is a protein that forms connective tissue throughout your body, from your bones to your
+                    skin.
+                </li>
+                <li>Your body naturally produces collagen. But over time, that production slows down.</li>
+                <li>Collagen is the most abundant protein in the skin. It makes up 75 to 80 percent of your skin.</li>
+                <li>Collagen supplements are an easy way to add more collagen to your diet.</li>
+                <li>Hydrolyzed collagen is broken down into smaller parts so it can be easily absorbed and used by your
+                    body.</li>
+                <li>
+                    <span>Collagen has been shown to :- </span>
+                    <ul>
+                        <li>Reduce wrinkles</li>
+                        <li>Keep joints strong and flexible</li>
+                        <li>Support strong bones</li>
+                        <li>Increase skin hydration</li>
+                    </ul>
+                </li>
+            </ul>
+            <div fxFlex fxLayoutAlign="center center">
+                <img src="assets/kolagen-shot.png">
             </div>
         </div>
     </div>
@@ -116,7 +146,7 @@
         <h2 class="nav-name">BLOG</h2>
     </div>
     <div class="page-container center-align">
-        <!-- <div style="display: inline;">
+        <div style="display: inline;">
             <div *ngFor="let prod of category" style="display: inline-block;">
                 <div class="inner-protein">
                     <a [href]="prod.url">
@@ -125,7 +155,6 @@
                     </a>
                 </div>
             </div>
-        </div> -->
-        <b>Work in progress</b>
+        </div>
     </div>
 </section>
