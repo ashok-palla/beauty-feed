@@ -11,4 +11,10 @@ export class AppComponent {
   hideMenu = true;
   @HostBinding('attr.class') role = 'vbox viewport';
   constructor(public sharedService: SharedService) { }
+  scrollToMenu() {
+    if (!this.hideMenu) {
+      document.body.scrollIntoView({ behavior: 'smooth' }); // For Safari
+      document.documentElement.scrollIntoView({ behavior: 'smooth' }); // For Chrome, Firefox, IE and Opera
+    }
+  }
 }
