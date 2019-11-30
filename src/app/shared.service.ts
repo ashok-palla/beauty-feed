@@ -29,7 +29,6 @@ export class SharedService {
             offer_price: 50,
             currency: 'EUR',
             quantity: [
-                // { qua: 250, in_stock: false },
                 { qua: 500, in_stock: true }
             ],
             measure: 'ML'
