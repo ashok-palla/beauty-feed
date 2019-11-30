@@ -2,12 +2,12 @@
     <div fxLayout="row" fxLayout.lt-md="column">
         <div fxLayout="row" fxFlex>
             <div fxLayout="column">
-                <img [class.selected-image]="prod.image_link == img" (click)="prod.image_link = img" class="thumbmails" [alt]="prod.name" style="display: inline;" [src]="img"
+                <img [class.selected-image]="prod.image_preview_link == img" (click)="prod.image_preview_link = img" class="thumbmails" [alt]="prod.name" style="display: inline;" [src]="img"
                     *ngFor="let img of prod.images">
             </div>
             <div fxLayoutAlign="center center" style="width: 420px; height: 420px; overflow: hidden;">
                 <img class="preview-img" [alt]="prod.name" style="display: inline;"
-                    [src]="prod.image_link">
+                    [src]="prod.image_preview_link">
             </div>
         </div>
         <div fxLayout="column" fxFlex>

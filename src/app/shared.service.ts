@@ -13,6 +13,7 @@ export class SharedService {
         {
             name: 'Collagen Shot',
             image_original_link: 'assets/00003.jpg',
+            image_preview_link: 'assets/00003.jpg',
             image_link: 'assets/00003.jpg',
             images: [
                 'assets/00003.jpg',
