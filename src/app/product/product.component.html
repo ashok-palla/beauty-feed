@@ -1,6 +1,6 @@
 <div fxFlex style="padding: 0 15px; padding-top: 50px;">
     <div fxLayout="row" fxLayout.lt-md="column">
-        <div fxLayout="row">
+        <div fxLayout="row" fxFlex>
             <div fxLayout="column">
                 <img [class.selected-image]="prod.image_link == img" (click)="prod.image_link = img" class="thumbmails" [alt]="prod.name" style="display: inline;" [src]="img"
                     *ngFor="let img of prod.images">
