@@ -14,8 +14,7 @@ export class HomeComponent implements OnInit {
     'assets/BackUp/11.jpg',
     'assets/BackUp/12.jpg',
     'assets/BackUp/13.jpg',
-    'assets/I-3.jpg',
-    'assets/BackUp/18.jpg'];
+    'assets/I-3.jpg'];
   public category = [
     {
       name: 'Tonique',
