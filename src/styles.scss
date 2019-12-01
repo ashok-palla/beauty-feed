@@ -888,3 +888,32 @@ a {
     line-height: 1.1;
     text-align: center;
 }
+
+.mainContainer {
+    margin: 25px auto 0;
+}
+
+.mainContainer,
+.wrapper {
+    background-color: #fff;
+}
+
+.cartSumDisLab {
+    font-size: .9em !important;
+}
+
+.cart-details {
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.invoiceAmounts {
+    font-size: .9em;
+    margin: 10px 0;
+}
+
+.btn-auto {
+    width: auto !important;
+}

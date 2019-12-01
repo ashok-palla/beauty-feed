@@ -1,5 +1,49 @@
 <div *ngIf="sharedService.cartCount !== 0" fxFlex style="padding: 0 15px;">
-    <div class="cartTitle">Your Shopping Cart</div>
+    <section class="mainContainer">
+        <div class="cartTitle">Your Shopping Cart</div>
+        <div fxLayout="row" fxLayout.lt-md="column">
+            <div fxFlex></div>
+            <div fxFlex="25%" fxLayout="column">
+                <div fxFlex="row" fxLayoutAlign="space-between center">
+                    <span>You Pay</span>
+                    <span><b>{{ totalPay | currency : sharedService.currency : 'symbol' : '1.0-0' }}</b></span>
+                </div>
+                <div fxFlex="row" fxLayoutAlign="space-between center">
+                    <span></span>
+                    <span class="cartSumDisLab">MRP:
+                        <span
+                            style="text-decoration: line-through;">{{ mrp | currency : sharedService.currency : 'symbol' : '1.0-0' }}</span>
+                        |
+                        <span style="color: red !important"> You save
+                            {{ savedAmount | currency : sharedService.currency : 'symbol' : '1.0-0' }}</span></span>
+                </div>
+                <span fxFlex="20px"></span>
+                <button routerLink="cart" class="buy_now_btn btn-auto" mat-raised-button color="accent">PROCCED TO
+                    CHECKOUT</button>
+                <span fxFlex="20px"></span>
+                <div class="cart-details">
+                    <div style="margin: 10px 0;">CHECK OUT DETAILS</div>
+                    <div class="invoiceAmounts" fxLayout="row" fxLayoutAlign="space-between center">
+                        <span>Total MRP</span>
+                        <span>{{ mrp | currency : sharedService.currency : 'symbol' : '1.0-0' }}</span>
+                    </div>
+                    <div class="invoiceAmounts" fxLayout="row" fxLayoutAlign="space-between center">
+                        <span>Saved Amount</span>
+                        <span>-{{ savedAmount | currency : sharedService.currency : 'symbol' : '1.0-0' }}</span>
+                    </div>
+                    <div class="invoiceAmounts" fxLayout="row" fxLayoutAlign="space-between center">
+                        <span>Shipping </span>
+                        <span>FREE</span>
+                    </div>
+                </div>
+                <div fxFlex="row" fxLayoutAlign="space-between center">
+                    <span>Total</span>
+                    <span><b>{{ totalPay | currency : sharedService.currency : 'symbol' : '1.0-0' }}</b></span>
+                </div>
+                <div style="font-size: 12px;">(inclusive of shipping, handling and taxes.)</div>
+            </div>
+        </div>
+    </section>
 </div>
 <div *ngIf="sharedService.cartCount === 0" fxFlex style="padding: 0 15px;">
     <div fxLayout="column" fxLayoutAlign="center center" fxFlex>

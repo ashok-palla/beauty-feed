@@ -42,9 +42,9 @@
                         <img class="lazy" [alt]="prod.name" style="display: inline;" [src]="prod.image_link">
                         <p class="product-name" [innerHtml]="prod.name"></p>
                         <div class="price-tag" fxLayoutGap="20px"><span
-                                class="price">{{(prod.mrp - prod.offer_price) | currency: prod.currency : 'symbol' : '1.0-0'}}</span><del
+                                class="price">{{(prod.mrp - prod.offer_price) | currency: sharedService.currency : 'symbol' : '1.0-0'}}</span><del
                                 class="offer"
-                                *ngIf="prod.offer_price > 0">{{prod.mrp | currency:prod.currency : 'symbol' : '1.0-0'}}</del>
+                                *ngIf="prod.offer_price > 0">{{prod.mrp | currency: sharedService.currency : 'symbol' : '1.0-0'}}</del>
                         </div>
                     </a>
                     <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">

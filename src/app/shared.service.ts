@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { isNullOrUndefined } from 'util';
 @Injectable()
 export class SharedService {
+    public currency =  'EUR';
     public menuLinks = [
         { name: 'Home', link: '' },
         { name: 'Collagen shot', link: 'product/1' },
@@ -16,6 +17,7 @@ export class SharedService {
     ];
     public products = [
         {
+            product_id: 1,
             name: 'Collagen Shot',
             image_original_link: 'assets/00003.jpg',
             image_preview_link: 'assets/00003.jpg',

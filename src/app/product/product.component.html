@@ -19,9 +19,9 @@
             <dd class="product-price">
                 <div class="price-tag" fxLayoutGap="20px">
                     <span
-                        class="price">{{(prod?.mrp - prod?.offer_price) | currency: prod?.currency : 'symbol' : '1.0-0'}}</span><del
+                        class="price">{{(prod?.mrp - prod?.offer_price) | currency: sharedService?.currency : 'symbol' : '1.0-0'}}</span><del
                         class="offer"
-                        *ngIf="prod?.offer_price > 0">{{prod?.mrp | currency:prod?.currency : 'symbol' : '1.0-0'}}</del>
+                        *ngIf="prod?.offer_price > 0">{{prod?.mrp | currency: sharedService?.currency : 'symbol' : '1.0-0'}}</del>
                 </div>
             </dd>
             <div>
