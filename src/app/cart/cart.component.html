@@ -23,7 +23,7 @@
                                 <div style="width: 150px;" fxLayoutAlign="center start" fxLayout="column">
                                     <span>{{ (prod.mrp - prod.offer_price) * prod.cartCount | currency : sharedService.currency : 'symbol' : '1.0-0' }}</span>
                                     <span
-                                        style="text-decoration: line-through;">{{ prod.offer_price * prod.cartCount | currency : sharedService.currency : 'symbol' : '1.0-0' }}</span>
+                                        style="text-decoration: line-through; color: #aaa;">{{ prod.offer_price * prod.cartCount | currency : sharedService.currency : 'symbol' : '1.0-0' }}</span>
                                 </div>
                                 <div fxLayoutAlign="center center">
                                     <i class="material-icons">delete</i>
