@@ -76,6 +76,7 @@ export class SharedService {
         },
         {
             title: 'MSM',
+            // tslint:disable-next-line: max-line-length
             description: 'Organic sulfur involved in collagen formation. Because of its effects, it is often referred to as a mineral of beauty.',
             image_url: 'assets/benefits/icon-msm.png',
             height: 100
