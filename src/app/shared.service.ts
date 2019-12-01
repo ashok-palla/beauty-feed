@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { isNullOrUndefined } from 'util';
 @Injectable()
 export class SharedService {
-    public currency =  'EUR';
+    public currency = 'EUR';
     public menuLinks = [
         { name: 'Home', link: '' },
         { name: 'Collagen shot', link: 'product/1' },
@@ -35,7 +35,6 @@ export class SharedService {
             mrp: 2990,
             offer_price: 50,
             offer_description: '<b>Free shipping</b> on order of 2 (or more) products',
-            currency: 'EUR',
             quantity: [
                 { qua: 500, in_stock: true }
             ],
@@ -90,15 +89,28 @@ export class SharedService {
     ];
     public cartCount = 0;
     setCartCount() {
+        this.cartCount = 0;
         let cart: object[] = JSON.parse(localStorage.getItem('cart'));
         if (isNullOrUndefined(cart)) { cart = []; }
-        this.cartCount = cart.length;
+        cart.forEach((data: any) => {
+            this.cartCount = this.cartCount + data.cartCount;
+        });
     }
     cartAdd(item) {
+        this.cartCount = 0;
         let cart: object[] = JSON.parse(localStorage.getItem('cart'));
         if (isNullOrUndefined(cart)) { cart = []; }
-        cart.push(item);
-        this.cartCount = cart.length;
+        const findProductIndex = cart.findIndex((data: any) => data.product_id === item.product_id);
+        if (findProductIndex === -1) {
+            item.cartCount = 1;
+            cart.push(item);
+        } else {
+            // tslint:disable-next-line: no-string-literal
+            cart[findProductIndex]['cartCount'] = cart[findProductIndex]['cartCount'] + 1;
+        }
+        cart.forEach((data: any) => {
+            this.cartCount = this.cartCount + data.cartCount;
+        });
         localStorage.setItem('cart', JSON.stringify(cart));
     }
     cartRemove() {

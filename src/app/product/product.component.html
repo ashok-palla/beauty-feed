@@ -39,12 +39,12 @@
                 <div class="offer-description" [innerHtml]="prod?.offer_description"
                     *ngIf="prod?.offer_description && prod?.offer_description?.length > 0"></div>
                 <div fxLayout="row" fxLayoutAlign="start center" style="margin: 10px 0;">
-                    <button class="add_to_cart_btn" mat-raised-button color="primary">
+                    <button (click)="sharedService.cartAdd(prod)" class="add_to_cart_btn" mat-raised-button color="primary">
                         <i class="material-icons">shopping_cart</i>&nbsp;
                         ADD TO CART
                     </button>
                     <span fxFlex="20px"></span>
-                    <button class="buy_now_btn" mat-raised-button color="accent">
+                    <button (click)="sharedService.cartAdd(prod)" routerLink="cart" class="buy_now_btn" mat-raised-button color="accent">
                         <i class="material-icons">credit_card</i>&nbsp;
                         BUY NOW
                     </button>

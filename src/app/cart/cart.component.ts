@@ -22,9 +22,9 @@ export class CartComponent implements OnInit {
     let cart = JSON.parse(localStorage.getItem('cart'));
     if (isNullOrUndefined(cart)) { cart = []; }
     cart.forEach(element => {
-      this.totalPay = this.totalPay + (element.mrp - element.offer_price);
-      this.mrp = this.mrp + element.mrp;
-      this.savedAmount = this.savedAmount + element.offer_price;
+      this.totalPay = (this.totalPay + (element.mrp - element.offer_price)) * element.cartCount;
+      this.mrp = (this.mrp + element.mrp) * element.cartCount;
+      this.savedAmount = (this.savedAmount + element.offer_price) * element.cartCount;
     });
   }
 }
