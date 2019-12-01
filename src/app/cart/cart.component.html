@@ -26,9 +26,8 @@
                                         style="text-decoration: line-through; color: #aaa;">{{ prod.offer_price * prod.cartCount | currency : sharedService.currency : 'symbol' : '1.0-0' }}</span>
                                 </div>
                                 <div fxLayoutAlign="center center">
-                                    <i class="material-icons">delete</i>
+                                    <i (click)="sharedService.cartRemove(prod); cartCalculate();" class="material-icons cart-remove">delete</i>
                                 </div>
-
                             </div>
                         </div>
                     </div>

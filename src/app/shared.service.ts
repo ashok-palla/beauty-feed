@@ -141,7 +141,14 @@ export class SharedService {
         });
         localStorage.setItem('cart', JSON.stringify(cart));
     }
-    cartRemove() {
-
+    cartRemove(item) {
+        this.cartCount = 0;
+        const cart: object[] = JSON.parse(localStorage.getItem('cart'));
+        const findProductIndex = cart.findIndex((data: any) => data.product_id === item.product_id);
+        cart.splice(findProductIndex, 1);
+        cart.forEach((data: any) => {
+            this.cartCount = this.cartCount + data.cartCount;
+        });
+        localStorage.setItem('cart', JSON.stringify(cart));
     }
 }

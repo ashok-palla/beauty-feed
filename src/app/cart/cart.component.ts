@@ -17,8 +17,7 @@ export class CartComponent implements OnInit {
     this.cartCalculate();
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
   cartCalculate() {
     this.cart = JSON.parse(localStorage.getItem('cart'));
     if (isNullOrUndefined(this.cart)) { this.cart = []; }
