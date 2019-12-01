@@ -1,4 +1,5 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
+import { SharedService } from '../shared.service';
 
 @Component({
   selector: 'app-blog',
@@ -7,10 +8,11 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
   @HostBinding('attr.class') role = 'vbox viewport margin_on_top';
-  constructor() { }
+  constructor(public sharedService: SharedService) { }
 
   ngOnInit() {
     localStorage.clear();
+    this.sharedService.setCartCount();
   }
 
 }
