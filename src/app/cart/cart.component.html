@@ -2,7 +2,39 @@
     <section class="mainContainer">
         <div class="cartTitle">Your Shopping Cart</div>
         <div fxLayout="row" fxLayout.lt-md="column">
-            <div fxFlex></div>
+            <div fxFlex fxLayout="column">
+                <div fxLayout="row" fxShow fxHide.lt-md style="margin-bottom: 15px;">
+                    <div style="width: 340px;">You are buying</div>
+                    <div style="width: 100px;">Qty</div>
+                    <div style="width: 150px;">Price</div>
+                    <div></div>
+                </div>
+                <div fxLayout="column" class="cart-items">
+                    <div fxLayout="row" *ngFor="let prod of cart" ngStyle.lt-md="margin-bottom: 10px">
+                        <div style="width: 90px; margin-bottom: 5px;" fxLayoutAlign="center center" fxLayoutAlign.lt-md="center start">
+                            <img class="thumbmails" style="border: none;" [alt]="prod?.name" [src]="prod.image_link">
+                        </div>
+                        <div fxLayout="row" fxLayout.lt-md="column">
+                            <div style="width: 250px; margin-bottom: 5px;" fxLayoutAlign="start center">
+                                <span [innerHtml]="prod?.name"></span>
+                            </div>
+                            <div style="width: 100px; margin-bottom: 5px;" fxLayoutAlign="start center">{{prod?.cartCount | number}}</div>
+                            <div fxLayout="row">
+                                <div style="width: 150px;" fxLayoutAlign="center start" fxLayout="column">
+                                    <span>{{ (prod.mrp - prod.offer_price) * prod.cartCount | currency : sharedService.currency : 'symbol' : '1.0-0' }}</span>
+                                    <span
+                                        style="text-decoration: line-through;">{{ prod.offer_price * prod.cartCount | currency : sharedService.currency : 'symbol' : '1.0-0' }}</span>
+                                </div>
+                                <div fxLayoutAlign="center center">
+                                    <i class="material-icons">delete</i>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span fxFlex="20px"></span>
             <div fxFlex="25%" fxLayout="column">
                 <div fxFlex="row" fxLayoutAlign="space-between center">
                     <span>You Pay</span>
