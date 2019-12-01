@@ -1,0 +1,12 @@
+<div *ngIf="sharedService.cartCount !== 0" fxFlex style="padding: 0 15px;">
+    <div class="cartTitle">Your Shopping Cart</div>
+</div>
+<div *ngIf="sharedService.cartCount === 0" fxFlex style="padding: 0 15px;">
+    <div fxLayout="column" fxLayoutAlign="center center" fxFlex>
+        <h2 class="empty-cart">NO PRODUCTS, NO RESULTS.</h2>
+        <h3 class="empty-cart">YOU NEED TO ADD SOMYHING TO YOUR CART!</h3>
+        <span fxFlex="20px"></span>
+        <button routerLink="" class="buy_now_btn" style="width: 300px;" mat-raised-button color="accent">START
+            SHOPPING NOW</button>
+    </div>
+</div>

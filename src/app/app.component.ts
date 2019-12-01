@@ -10,7 +10,9 @@ export class AppComponent {
   title = 'Gaia Naturelle';
   hideMenu = true;
   @HostBinding('attr.class') role = 'vbox viewport';
-  constructor(public sharedService: SharedService) { }
+  constructor(public sharedService: SharedService) {
+    this.sharedService.setCartCount();
+  }
   scrollToMenu() {
     if (!this.hideMenu) {
       document.body.scrollTop = 0; // For Safari

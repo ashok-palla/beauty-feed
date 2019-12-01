@@ -48,7 +48,8 @@
                         </div>
                     </a>
                     <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
-                        <button class="add_to_cart_btn" mat-raised-button color="primary">
+                        <button (click)="sharedService.cartAdd(prod)" class="add_to_cart_btn" mat-raised-button
+                            color="primary">
                             <i class="material-icons">shopping_cart</i>&nbsp;
                             ADD TO CART
                         </button>

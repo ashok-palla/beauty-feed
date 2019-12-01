@@ -13,17 +13,41 @@
                 </span>
             </div>
             <div fxFlex="22%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="end center">
-                <span class="login_and_signup" fxLayoutAlign="center center">
+                <span [matMenuTriggerFor]="loginPane" class="login_and_signup" fxLayoutAlign="center center">
                     <i fxShow.lt-md fxHide class="material-icons">person</i>
                     <span fxHide fxShow.gt-sm>Login & Signup</span>
                 </span>
                 <span fxFlex="20px"></span>
-                <span class="link-icon" fxLayoutAlign="center center">
+                <span [matMenuTriggerFor]="cartPane" class="link-icon" fxLayoutAlign="center center">
                     <i class="material-icons" style="color: white;">shopping_cart</i>
                     <span fxHide fxShow.gt-sm>&nbsp;Cart</span>
                 </span>
-                <span class="mL fnt-sz10 item-count" data-role="cart-counter">0</span>
+                <span class="mL fnt-sz10 item-count" data-role="cart-counter"
+                    [innerText]="sharedService.cartCount"></span>
             </div>
+            <mat-menu #loginPane="matMenu" xPosition="before">
+                <ng-template matMenuContent>
+                    <div fxLayout="column" style="width: 200px; height: 200px; padding: 10px;">
+                        <button mat-raised-button color="primary">Login with Facebook</button>
+                        <span fxFlex="10px"></span>
+                        <button mat-raised-button color="accent">Login with Google</button>
+                        <div style="text-align: center; font-weight: bold;">Work in progress</div>
+                    </div>
+                </ng-template>
+            </mat-menu>
+            <mat-menu #cartPane="matMenu" xPosition="before">
+                <ng-template matMenuContent>
+                    <div fxLayout="column" style="width: 200px;">
+                        <div style="text-align: center;"><b>Cart Summary</b></div>
+                        <div style="text-align: center; margin-top: 10px;">{{sharedService.cartCount | number}} items
+                        </div>
+                        <div fxFlex="20px"></div>
+                        <div fxLayoutAlign="center center">
+                            <button routerLink="cart" class="buy_now_btn" mat-raised-button color="accent">PROCCED TO CART</button>
+                        </div>
+                    </div>
+                </ng-template>
+            </mat-menu>
         </div>
     </div>
     <mat-list fxHide fxShow.lt-md role="list" [class.hide-menu]="hideMenu" class="mobile-menu">

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { isNullOrUndefined } from 'util';
 @Injectable()
 export class SharedService {
     public menuLinks = [
@@ -85,4 +86,20 @@ export class SharedService {
             height: 100
         }
     ];
+    public cartCount = 0;
+    setCartCount() {
+        let cart: object[] = JSON.parse(localStorage.getItem('cart'));
+        if (isNullOrUndefined(cart)) { cart = []; }
+        this.cartCount = cart.length;
+    }
+    cartAdd(item) {
+        let cart: object[] = JSON.parse(localStorage.getItem('cart'));
+        if (isNullOrUndefined(cart)) { cart = []; }
+        cart.push(item);
+        this.cartCount = cart.length;
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+    cartRemove() {
+
+    }
 }

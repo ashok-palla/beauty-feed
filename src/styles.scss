@@ -870,3 +870,20 @@ a {
     background-size: cover;
     width: 100%;
 }
+
+.cartTitle,
+.cartTitleMobile {
+    font-size: 24px;
+    line-height: 28px;
+    font-family: montserrat;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 12px 30px;
+}
+
+.empty-cart {
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
