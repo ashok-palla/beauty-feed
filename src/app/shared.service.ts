@@ -5,7 +5,7 @@ export class SharedService {
     public currency = 'EUR';
     public menuLinks = [
         { name: 'Home', link: '' },
-        { name: 'Collagen shot', link: 'product/1' },
+        { name: 'Collagen Shot Premium', link: 'product/1' },
         { name: 'Sales Point', link: 'sales-point' },
         { name: 'My Story', link: 'my-story' },
         { name: 'Blog', link: 'blog' },
@@ -19,19 +19,19 @@ export class SharedService {
         {
             image_url: 'assets/mladostna-koza.png',
             // tslint:disable-next-line: max-line-length
-            description: 'Collagen shot with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
+            description: 'Collagen Shot Premium with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
             height: 100
         },
         {
             image_url: 'assets/sijoci-lasje.png',
             // tslint:disable-next-line: max-line-length
-            description: 'Collagen shot with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
+            description: 'Collagen Shot Premium with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
             height: 100
         },
         {
             image_url: 'assets/cvrsti-nohti.png',
             // tslint:disable-next-line: max-line-length
-            description: 'Zinc in the product helps keep nails healthy, and using Collagen Shot will make your nails firmer.',
+            description: 'Zinc in the product helps keep nails healthy, and using Collagen Shot Premium will make your nails firmer.',
             height: 100
         }
     ];
@@ -39,7 +39,7 @@ export class SharedService {
         {
             product_id: 1,
             cartCount: 0,
-            name: 'Collagen Shot',
+            name: 'Collagen Shot Premium',
             image_original_link: 'assets/00003.jpg',
             image_preview_link: 'assets/00003.jpg',
             image_link: 'assets/00003.jpg',
@@ -65,7 +65,7 @@ export class SharedService {
         // {
         //     product_id: 2,
         //     cartCount: 0,
-        //     name: 'Collagen Shot',
+        //     name: 'Collagen Shot Premium',
         //     image_original_link: 'assets/00003.jpg',
         //     image_preview_link: 'assets/00003.jpg',
         //     image_link: 'assets/00003.jpg',
@@ -117,7 +117,7 @@ export class SharedService {
         },
         {
             title: 'Vitamins and zinc',
-            description: 'For maximum efficiency, Vitamin C, E, B6 and biotin and zinc are added to Collagen shot.',
+            description: 'For maximum efficiency, Vitamin C, E, B6 and biotin and zinc are added to Collagen Shot Premium.',
             image_url: 'assets/benefits/icon-vitamini.png',
             height: 100
         },
