@@ -7,11 +7,10 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class BlogComponent implements OnInit {
   @HostBinding('attr.class') role = 'vbox viewport margin_on_top';
-  constructor() {
-    localStorage.clear();
-  }
+  constructor() { }
 
   ngOnInit() {
+    localStorage.clear();
   }
 
 }
