@@ -13,7 +13,7 @@
             *ngFor="let image of imageArray; let i = index;" (click)="pageIndex = i"></div>
     </div>
 </div>
-<section id="mb-categories">
+<section id="mb-categories" fxFlex>
     <!-- <div class="page-container center-align">
         <div class="category-head">
             <h2>FEATURE CATEGORIES</h2>
@@ -49,16 +49,30 @@
                     </a>
                     <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
                         <button (click)="sharedService.cartAdd(prod)" class="add_to_cart_btn" mat-raised-button
-                            color="primary"> 
+                            color="primary">
                             <i class="material-icons">shopping_cart</i>&nbsp;
                             ADD TO CART
                         </button>
                         <span fxFlex="20px"></span>
-                        <button (click)="sharedService.cartAdd(prod)" routerLink="/cart" class="buy_now_btn" mat-raised-button color="accent">
+                        <button (click)="sharedService.cartAdd(prod)" routerLink="/cart" class="buy_now_btn"
+                            mat-raised-button color="accent">
                             <i class="material-icons">credit_card</i>&nbsp;
                             BUY NOW
                         </button>
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="page-container center-align" style="padding-top: 30px;">
+        <div style="display: inline;">
+            <div *ngFor="let benefits of sharedService.priorities" style="display: inline-block;">
+                <div class="benefits-inner-protein">
+                    <div class="benefits-img-holder">
+                        <img [style.height.px]="benefits.height" [alt]="benefits.image_url" style="display: inline;"
+                            [src]="benefits.image_url">
+                    </div>
+                    <p class="benefit-description" [innerHtml]="benefits.description"></p>
                 </div>
             </div>
         </div>

@@ -15,6 +15,26 @@ export class SharedService {
         { image_link: 'assets/facebook_circle-512.png', url: 'https://www.facebook.com/gaianaturelle.kolagenshot/' },
         { image_link: 'assets/insta.png', url: 'https://www.facebook.com/gaianaturelle.kolagenshot/' }
     ];
+    public priorities = [
+        {
+            image_url: 'assets/mladostna-koza.png',
+            // tslint:disable-next-line: max-line-length
+            description: 'Collagen shot with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
+            height: 100
+        },
+        {
+            image_url: 'assets/sijoci-lasje.png',
+            // tslint:disable-next-line: max-line-length
+            description: 'Collagen shot with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
+            height: 100
+        },
+        {
+            image_url: 'assets/cvrsti-nohti.png',
+            // tslint:disable-next-line: max-line-length
+            description: 'Zinc in the product helps keep nails healthy, and using Collagen Shot will make your nails firmer.',
+            height: 100
+        }
+    ];
     public products = [
         {
             product_id: 1,
