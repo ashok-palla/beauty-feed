@@ -36,13 +36,13 @@ export class HomeComponent implements OnInit {
       image_original_link: 'assets/izrada-prirodne-kozmetike-1-800x178.jpg',
       image_link: 'assets/izrada-prirodne-kozmetike-1-800x178.jpg',
       url: '#/product/1',
-    },
-    {
-      name: 'Hydrolyzed collagen, peptides of collagen, collagen precursors, collagen',
-      image_original_link: 'assets/hidrolizirani-kolagen-1-800x178.jpg',
-      image_link: 'assets/hidrolizirani-kolagen-1-800x178.jpg',
-      url: '#/product/1',
     }
+    // {
+    //   name: 'Hydrolyzed collagen, peptides of collagen, collagen precursors, collagen',
+    //   image_original_link: 'assets/hidrolizirani-kolagen-1-800x178.jpg',
+    //   image_link: 'assets/hidrolizirani-kolagen-1-800x178.jpg',
+    //   url: '#/product/1',
+    // }
   ];
   public TESTIMONIALS = [
     {
