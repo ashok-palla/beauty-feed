@@ -43,8 +43,7 @@
                         </div>
                         <div fxFlex="20px"></div>
                         <div fxLayoutAlign="center center">
-                            <button routerLink="cart" class="buy_now_btn" mat-raised-button color="accent">PROCCED TO
-                                CART</button>
+                            <button routerLink="cart" class="buy_now_btn" mat-raised-button color="accent">PROCCED TO CART</button>
                         </div>
                     </div>
                 </ng-template>
@@ -58,10 +57,8 @@
                 [innerHtml]="menu.name"></a>
         </mat-list-item>
     </mat-list>
-    <div fxFlex>
-        <router-outlet style="display: none"></router-outlet>
-    </div>
-    <div id="mb-footer">
+    <router-outlet style="display: none"></router-outlet>
+    <section id="mb-footer">
         <div class="footer-top">
             <div class="page-container">
                 <div class="mb-footer-left">
@@ -118,5 +115,5 @@
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
