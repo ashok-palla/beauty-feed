@@ -926,3 +926,18 @@ a {
 .cart-remove {
     cursor: pointer;
 }
+
+.footer-block {
+    padding: 20px;
+    color: white;
+    max-width: 1170px;
+    padding: 30 15px;
+    margin: 0 auto;
+}
+.black-bg {
+    background: url('https://img3.hkrtcdn.com/dist-mb/src/main/webapp/assets/images/mbUpdate/footer-bg.jpg') no-repeat;
+    background-size: cover;
+}
+.footer-block a {
+    color: white;
+}

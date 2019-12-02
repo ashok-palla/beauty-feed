@@ -58,7 +58,35 @@
         </mat-list-item>
     </mat-list>
     <div fxFlex>
-        <router-outlet style="display: none"></router-outlet> 
+        <router-outlet style="display: none"></router-outlet>
+    </div>
+    <div class="black-bg">
+        <div fxLayout="row" fxLayout.lt-md="column" class="footer-block">
+            <div fxLayout="column">
+                <div *ngFor="let menu of sharedService.menuLinks" style="margin-bottom: 10px;">
+                    <a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" [routerLink]="menu.link"
+                        [innerHtml]="menu.name"></a>
+                </div>
+                <div fxLayout="row" fxLayout.lt-md="column">
+                    <h3 fxLayoutAlign="start center" style="margin: 0;">Contact with Us</h3>
+                    <span fxFlex="20px"></span>
+                    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+                        <div *ngFor="let social of sharedService.socialLinks">
+                            <a [href]="social.url" target="_blank">
+                                <img [src]="social.image_link" width="34">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <span fxFlex="30px"></span>
+            <div fxLayout="column">
+                <div>Contact Us</div>
+                <span fxFlex="20px"></span>
+                <div>+91 99 999 99 999</div>
+                <div>info@gaianaturelle.com</div>
+            </div>
+        </div>
     </div>
     <!-- <footer id="mb-footer">
         <div class="footer-top">
