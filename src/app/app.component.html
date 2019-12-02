@@ -57,8 +57,10 @@
                 [innerHtml]="menu.name"></a>
         </mat-list-item>
     </mat-list>
-    <router-outlet style="display: none"></router-outlet>
-    <footer id="mb-footer">
+    <div fxFlex>
+        <router-outlet style="display: none"></router-outlet>
+    </div>
+    <!-- <footer id="mb-footer">
         <div class="footer-top">
             <div class="page-container">
                 <div class="mb-footer-left">
@@ -115,5 +117,5 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> -->
 </div>
