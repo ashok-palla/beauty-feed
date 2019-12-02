@@ -63,12 +63,13 @@
     <div class="black-bg">
         <div fxLayout="row" fxLayout.lt-md="column" class="footer-block">
             <div fxLayout="column">
-                <div *ngFor="let menu of sharedService.menuLinks" style="margin-bottom: 10px; text-transform: uppercase;">
+                <div *ngFor="let menu of sharedService.menuLinks"
+                    style="margin-bottom: 10px; text-transform: uppercase;">
                     <a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" [routerLink]="menu.link"
                         [innerHtml]="menu.name"></a>
                 </div>
                 <div fxLayout="row" fxLayout.lt-md="column">
-                    <h3 fxLayoutAlign="start center" style="margin: 0;">Contact with Us</h3>
+                    <h3 fxLayoutAlign="start center" style="margin: 0;">CONNECT WITH US</h3>
                     <span fxFlex="20px"></span>
                     <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
                         <div *ngFor="let social of sharedService.socialLinks">
@@ -81,69 +82,36 @@
             </div>
             <span fxFlex="30px"></span>
             <div fxLayout="column">
-                <h3>Contact Us</h3>
+                <h3 style="margin: 0;">CONTACT US</h3>
                 <span fxFlex="20px"></span>
                 <div>+91 99 999 99 999</div>
-                <div>info@gaianaturelle.com</div>
+                <span fxFlex="3px"></span>
+                <a href="mailto:info@gaianaturelle.com">info@gaianaturelle.com</a>
             </div>
         </div>
     </div>
-    <!-- <footer id="mb-footer">
-        <div class="footer-top">
-            <div class="page-container">
-                <div class="mb-footer-left">
-                    <div class="mb-footerlinks">
-                        <ul>
-                            <li *ngFor="let menu of sharedService.menuLinks">
-                                <a routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}"
-                                    [routerLink]="menu.link" [innerHtml]="menu.name"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div fxShow.gt-sm class="mb-address">
-                        <h3>Contact us</h3>
-                        <address>
-                            +91 99 999 99 999<br>
-                            <a href="mailto:info@gaianaturelle.com">info@gaianaturelle.com</a>
-                        </address>
-                    </div>
-                    <div class="mb-sociallinks" fxLayout="column" fxLayout.gt-md="row">
-                        <span fxLayoutAlign="start center">
-                            <h3>connect with us</h3>
-                        </span>
-                        <ul class="social-links">
-                            <li *ngFor="let social of sharedService.socialLinks"><a [href]="social.url" target="_blank">
-                                    <img [src]="social.image_link" width="34">
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+    <div style="font-size: 12px; background-color: #d1d3d4;">
+        <div class="footer-block page-container" style="padding-top: 0; padding-bottom: 0;">
+            <div class="disclaimer" style="text-align: center; color: #616262 !important;">
+                <p>
+                    <strong>Disclaimer</strong>:All Gaia Nuterella products are manufactured at FSSAI approved
+                    manufacturing facilities and are not intended to diagnose, treat, cure, or prevent any disease.
+                    Please read product packaging carefully prior to purchase and use.The information/articles on
+                    Gaia Nuterella (www.GaiaNuterella.com or subdomains) is provided for informational purpose only
+                    and
+                    is
+                    not meant to substitute for the advice provided by your doctor or other healthcare professional.
+                    These statements are not ratified by any government agency and are for general guidance only.
+                </p>
+                <p><strong>Important Notice</strong>:This is to bring to your notice that we are in the process of
+                    changing our MRPs for select Whey Products. Given, we are present in multiple channels, you
+                    might
+                    find products with higher MRPs as well, especially in offline channels. However, keeping
+                    consumer
+                    interest in mind we have decided to pass on the benefit of revised MRPs with immediate effect.
+                </p>
+                <p>Copyright 2019 gaianuterella.com</p>
             </div>
         </div>
-        <div class="footer-bottom" style="color: black;">
-            <div class="page-container">
-                <div class="disclaimer">
-                    <p>
-                        <strong>Disclaimer</strong>:All Gaia Nuterella products are manufactured at FSSAI approved
-                        manufacturing facilities and are not intended to diagnose, treat, cure, or prevent any disease.
-                        Please read product packaging carefully prior to purchase and use.The information/articles on
-                        Gaia Nuterella (www.GaiaNuterella.com or subdomains) is provided for informational purpose only
-                        and
-                        is
-                        not meant to substitute for the advice provided by your doctor or other healthcare professional.
-                        These statements are not ratified by any government agency and are for general guidance only.
-                    </p>
-                    <p><strong>Important Notice</strong>:This is to bring to your notice that we are in the process of
-                        changing our MRPs for select Whey Products. Given, we are present in multiple channels, you
-                        might
-                        find products with higher MRPs as well, especially in offline channels. However, keeping
-                        consumer
-                        interest in mind we have decided to pass on the benefit of revised MRPs with immediate effect.
-                    </p>
-                    <p>Copyright 2019 gaianuterella.com</p>
-                </div>
-            </div>
-        </div>
-    </footer> -->
+    </div>
 </div>
