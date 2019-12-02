@@ -1,4 +1,4 @@
-<div fxFlex style="padding: 0 15px; padding-top: 50px;">
+<div fxFlex style="padding: 0 15px; padding-top: 50px;" ngStyle.gt-md="width: 920px; margin: 0 auto;">
     <div fxLayout="row" fxLayout.lt-md="column">
         <div fxLayout="row" fxFlex>
             <div fxLayout="column">
@@ -11,19 +11,21 @@
             </div>
         </div>
         <div fxLayout="column" fxFlex>
-            <h1 class="product-name" [innerHtml]="prod?.name"></h1>
+            <h1 class="product-name" [innerHtml]="prod?.name" style="padding-bottom: 5px;"></h1>
             <div>
-                <span class="product-offer-tag" *ngIf="prod.offer_price > 0">{{prod?.offer_price/prod?.mrp | percent}}
-                    OFF</span>
+                <!-- <span class="product-offer-tag" *ngIf="prod.offer_price > 0">{{prod?.offer_price/prod?.mrp | percent}}
+                    OFF</span> -->
+                <span class="product-offer-tag" *ngIf="prod.offer_price > 0">Coming Soon</span>
             </div>
-            <dd class="product-price">
+            <span fxFlex="20px"></span>
+            <!-- <dd class="product-price">
                 <div class="price-tag" fxLayoutGap="20px">
                     <span
                         class="price">{{(prod?.mrp - prod?.offer_price) | currency: sharedService?.currency : 'symbol' : '1.0-0'}}</span><del
                         class="offer"
                         *ngIf="prod?.offer_price > 0">{{prod?.mrp | currency: sharedService?.currency : 'symbol' : '1.0-0'}}</del>
                 </div>
-            </dd>
+            </dd> -->
             <div>
                 <div>Net Quantity: </div>
                 <div style="display: inline;">
@@ -32,10 +34,10 @@
                         {{quanti?.qua}}&nbsp;{{prod?.measure}}</div>
                 </div>
             </div>
-            <div class="stock-details">
+            <!-- <div class="stock-details">
                 {{prod?.in_stock | number }} in stock
-            </div>
-            <div class="product-buttons">
+            </div> -->
+            <!-- <div class="product-buttons">
                 <div class="offer-description" [innerHtml]="prod?.offer_description"
                     *ngIf="prod?.offer_description && prod?.offer_description?.length > 0"></div>
                 <div fxLayout="row" fxLayoutAlign="start center" style="margin: 10px 0;">
@@ -47,6 +49,16 @@
                     <button (click)="sharedService.cartAdd(prod)" routerLink="/cart" class="buy_now_btn" mat-raised-button color="accent">
                         <i class="material-icons">credit_card</i>&nbsp;
                         BUY NOW
+                    </button>
+                </div>
+            </div> -->
+            <div class="product-buttons">
+                <div class="offer-description" [innerHtml]="prod?.offer_description"
+                    *ngIf="prod?.offer_description && prod?.offer_description?.length > 0"></div>
+                <div fxLayout="row" fxLayoutAlign="start center" style="margin: 10px 0;">
+                    <button (click)="sharedService.cartAdd(prod)" routerLink="/cart" class="buy_now_btn"
+                        mat-raised-button color="accent">
+                        PRE-ORDER
                     </button>
                 </div>
             </div>
@@ -93,25 +105,25 @@
             <div style="display: inline;">
                 <div class="free-ingredients">
                     <div style="text-align: center;">
-                        <img src="assets/gluten free.png" width="60">
+                        <img src="assets/gluten free.png" width="90">
                     </div>
                     <p style="text-align: center;">GLUTEN FREE</p>
                 </div>
                 <div class="free-ingredients">
                     <div style="text-align: center;">
-                        <img src="assets/gmo free.png" width="60">
+                        <img src="assets/gmo free.png" width="90">
                     </div>
                     <p style="text-align: center;">WITHOUT GENETICALLY MODIFIED ORGANISMS</p>
                 </div>
                 <div class="free-ingredients">
                     <div style="text-align: center;">
-                        <img src="assets/lactose free.png" width="60">
+                        <img src="assets/lactose free.png" width="90">
                     </div>
                     <p style="text-align: center;">NO LACTOSE</p>
                 </div>
                 <div class="free-ingredients">
                     <div style="text-align: center;">
-                        <img src="assets/sugar free.png" width="60">
+                        <img src="assets/sugar free.png" width="90">
                     </div>
                     <p style="text-align: center;">NO SUGAR</p>
                 </div>

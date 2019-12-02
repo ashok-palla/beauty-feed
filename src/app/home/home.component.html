@@ -14,22 +14,29 @@
     </div>
 </div>
 <section id="mb-categories">
-    <!-- <div class="page-container center-align">
+    <div class="page-container center-align bg" style="padding-bottom: 30px;">
         <div class="category-head">
-            <h2>FEATURE CATEGORIES</h2>
+            <h2>FEATURED PRODUCTS</h2>
         </div>
         <div style="display: inline;">
             <div *ngFor="let prod of category" style="display: inline-block;">
                 <div class="inner-protein">
+                    <div class="offer-tag">Coming Soon</div>
                     <a [href]="prod.url">
                         <img class="lazy" [alt]="prod.name" style="display: inline;" [src]="prod.image_link">
                         <p class="product-name" [innerHtml]="prod.name"></p>
                     </a>
+                    <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
+                        <button (click)="sharedService.cartAdd(prod)" routerLink="/cart" class="buy_now_btn"
+                            mat-raised-button color="accent">
+                            PRE-ORDER
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div> -->
-    <div class="page-container center-align bg" style="padding-bottom: 30px;">
+    </div>
+    <!-- <div class="page-container center-align bg" style="padding-bottom: 30px;">
         <div class="category-head">
             <h2>FEATURED PRODUCTS</h2>
         </div>
@@ -63,7 +70,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="page-container center-align" style="padding-top: 30px;">
         <div style="display: inline;">
             <div *ngFor="let benefits of sharedService.priorities" style="display: inline-block;">
@@ -78,7 +85,7 @@
         </div>
     </div>
     <div class="page-container center-align">
-        <div class="category-head">
+        <div class="category-head" style="text-align: center;">
             <h2>Benefits of Collagen Shot Premium</h2>
         </div>
         <div style="display: inline;">
@@ -161,7 +168,7 @@
         </div>
     </div> -->
 </section>
-<section style="background-color: #f5f5f5;" (swipeleft)="increseTestmoPagination()"
+<!-- <section style="background-color: #f5f5f5;" (swipeleft)="increseTestmoPagination()"
     (swiperight)="decreaseTestmoPagination()" (mouseenter)="testmoClearTimer()" (mouseleave)="testmoInterval()">
     <div class="container main-block">
         <div class="border-line"></div>
@@ -191,7 +198,7 @@
             *ngFor="let pagination of testmoPaginationArray; let i = index;"
             (click)="testmoPageSelected = pagination; testmoPagination()"></div>
     </div>
-</section>
+</section> -->
 <section id="mb-categories" style="background-color: #f5f5f5;">
     <div class="container main-block">
         <div class="border-line"></div>

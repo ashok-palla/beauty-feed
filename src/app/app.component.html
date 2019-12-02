@@ -12,7 +12,7 @@
                         [innerHtml]="menu.name"></a>
                 </span>
             </div>
-            <div fxFlex="22%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="end center">
+            <!-- <div fxFlex="22%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="end center">
                 <span [matMenuTriggerFor]="loginPane" class="login_and_signup" fxLayoutAlign="center center">
                     <i fxShow.lt-md fxHide class="material-icons">person</i>
                     <span fxHide fxShow.gt-sm>Login & Signup</span>
@@ -24,8 +24,8 @@
                 </span>
                 <span class="mL fnt-sz10 item-count" data-role="cart-counter"
                     [innerText]="sharedService.cartCount"></span>
-            </div>
-            <mat-menu #loginPane="matMenu" xPosition="before">
+            </div> -->
+            <!-- <mat-menu #loginPane="matMenu" xPosition="before">
                 <ng-template matMenuContent>
                     <div fxLayout="column" style="width: 200px; height: 200px; padding: 10px;">
                         <button mat-raised-button color="primary">Login with Facebook</button>
@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 </ng-template>
-            </mat-menu>
+            </mat-menu> -->
         </div>
     </div>
     <mat-list fxHide fxShow.lt-md role="list" [class.hide-menu]="hideMenu" class="mobile-menu">
