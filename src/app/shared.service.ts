@@ -14,7 +14,7 @@ export class SharedService {
     ];
     public socialLinks = [
         { image_link: 'assets/facebook_circle-512.png', url: 'https://www.facebook.com/gaianaturelle.kolagenshot/' },
-        { image_link: 'assets/insta.png', url: 'https://www.facebook.com/gaianaturelle.kolagenshot/' }
+        { image_link: 'assets/insta.png', url: 'https://www.instagram.com/gaianaturelle_eu/' }
     ];
     public priorities = [
         {
@@ -26,7 +26,7 @@ export class SharedService {
         {
             image_url: 'assets/hair.jpg',
             // tslint:disable-next-line: max-line-length
-            description: 'After a few weeks of regular use, your hair will be more powerful and shiny, and some of the ingredients in the product will also affect hair growth.',
+            description: 'Contains low molecular weight fish collagen, which enables its excellent absorption.',
             height: 150
         },
         {
@@ -47,7 +47,7 @@ export class SharedService {
             images: [
                 'assets/00003.jpg',
                 'assets/00009.jpg',
-                'assets/00010.jpg', 
+                'assets/00010.jpg',
                 'assets/BackUp/13.jpg',
                 'assets/BackUp/14.jpg',
                 'assets/BackUp/15.jpg',
@@ -55,7 +55,7 @@ export class SharedService {
             url: '#/product/1',
             mrp: 2990,
             offer_price: 50,
-            offer_description: '<b>Free shipping</b> on order of 2 (or more) products',
+            offer_description: '',
             quantity: [
                 { qua: 500, in_stock: true }
             ],
@@ -111,13 +111,13 @@ export class SharedService {
     public collegenshotbenefits = [
         {
             title: 'Fish collagen',
-            description: 'The small particle size allows for the best possible absorption and thus high product efficiency.',
+            description: 'Contains low molecular weight fish collagen, which enables its excellent absorption.',
             image_url: 'assets/benefits/icon-riba.png',
             height: 100
         },
         {
             title: 'Vitamins and zinc',
-            description: 'For maximum efficiency, Vitamin C, E, B6 and biotin and zinc are added to Collagen Shot Premium.',
+            description: 'For maximum efficiency, Vitamin C, E, B6 and Biotin and Zinc are added to Collagen Shot Premium.',
             image_url: 'assets/benefits/icon-vitamini.png',
             height: 100
         },

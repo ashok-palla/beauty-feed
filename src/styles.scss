@@ -46,6 +46,7 @@ body {
     margin: 0;
     // font-family: Roboto, "Helvetica Neue", sans-serif;
     font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
 }
 
 header,
@@ -965,4 +966,18 @@ a {
 
 .mat-dialog-container {
     padding: 0 !important;
+}
+
+[data-animation] {
+    will-change: filter, transform, opacity;
+    -webkit-backface-visibility: hidden;
+    animation-fill-mode: forwards;
+    opacity: 0 !important;
+    transition: filter 1.3s, transform 1.6s, opacity .7s ease-in;
+}
+
+[data-animated="true"] {
+    animation-delay: .1s;
+    transform: translate3d(0, 0, 0) scale(1);
+    opacity: 1 !important;
 }

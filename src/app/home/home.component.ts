@@ -10,7 +10,7 @@ import { trigger, transition, style, query, animate, stagger, group, animateChil
     trigger('slideInOut', [
       // state('in', style({ height: '*', opacity: 0, left: '20%' })),
       transition(':enter', [
-        style({ height: 0, opacity: 0, top: '300px', fontSize: '100px', color: 'gold', fontWeight: 'bold' }),
+        style({ height: 0, opacity: 0, top: '300px', fontSize: '40px', color: 'gold', fontWeight: 'bold' }),
         group([
           animate(1000, style({ left: '20%'})),
           animate(1000, style({ opacity: 1 })),
@@ -36,8 +36,7 @@ export class HomeComponent implements OnInit {
     'assets/16.jpg',
     'assets/BackUp/11.jpg',
     'assets/BackUp/12.jpg',
-    'assets/BackUp/13.jpg',
-    'assets/I-3.jpg'];
+    'assets/BackUp/13.jpg'];
   public category = [
     {
       name: 'Collagen Shot Premium',
