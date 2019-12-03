@@ -5,7 +5,7 @@ import { trigger, transition, style, query, animate, stagger, group, animateChil
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: ['./home.component.scss'], 
   // animations: [
   //   trigger('preview', [
   //     transition(':enter', [
