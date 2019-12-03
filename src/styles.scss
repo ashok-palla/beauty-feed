@@ -934,10 +934,22 @@ a {
     padding: 30px 15px;
     margin: 0 auto;
 }
+
 .black-bg {
     background: url('https://img3.hkrtcdn.com/dist-mb/src/main/webapp/assets/images/mbUpdate/footer-bg.jpg') no-repeat;
     background-size: cover;
 }
+
 .footer-block a {
     color: white;
+}
+
+.parts-inner-protein {
+    width: 360px;
+    margin-bottom: 20px;
+    padding: 5px 14px;
+    margin: 5px;
+}
+.parts-img-holder {
+    height: 150px;
 }

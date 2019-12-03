@@ -17,22 +17,22 @@ export class SharedService {
     ];
     public priorities = [
         {
-            image_url: 'assets/mladostna-koza.png',
+            image_url: 'assets/hair.jpg',
             // tslint:disable-next-line: max-line-length
             description: 'Collagen Shot Premium with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
-            height: 100
+            height: 150
         },
         {
-            image_url: 'assets/sijoci-lasje.png',
+            image_url: 'assets/skin.jpg',
             // tslint:disable-next-line: max-line-length
             description: 'Collagen Shot Premium with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
-            height: 100
+            height: 150
         },
         {
-            image_url: 'assets/cvrsti-nohti.png',
+            image_url: 'assets/nails.jpg',
             // tslint:disable-next-line: max-line-length
             description: 'Zinc in the product helps keep nails healthy, and using Collagen Shot Premium will make your nails firmer.',
-            height: 100
+            height: 150
         }
     ];
     public products = [
