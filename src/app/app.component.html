@@ -12,6 +12,13 @@
                         [innerHtml]="menu.name"></a>
                 </span>
             </div>
+            <div fxFlex.gt-md="22%" fxFlex fxLayout="row" fxLayoutAlign="end center" fxLayoutGap="10px">
+                <div *ngFor="let social of sharedService.socialLinks">
+                    <a [href]="social.url" target="_blank">
+                        <img [src]="social.image_link" width="34">
+                    </a>
+                </div>
+            </div>
             <!-- <div fxFlex="22%" fxFlex.lt-md="50%" fxLayout="row" fxLayoutAlign="end center">
                 <span [matMenuTriggerFor]="loginPane" class="login_and_signup" fxLayoutAlign="center center">
                     <i fxShow.lt-md fxHide class="material-icons">person</i>

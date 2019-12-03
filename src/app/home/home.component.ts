@@ -10,20 +10,20 @@ import { trigger, transition, style, query, animate, stagger, group, animateChil
     trigger('slideInOut', [
       // state('in', style({ height: '*', opacity: 0, left: '20%' })),
       transition(':enter', [
-        style({ height: 0, opacity: 0, top: '300px', fontSize: '40px', color: 'gold', fontWeight: 'bold' }),
+        style({ height: 0, opacity: 0, top: '300px', fontSize: '100px', color: 'gold', fontWeight: 'bold' }),
         group([
           animate(1000, style({ left: '20%'})),
           animate(1000, style({ opacity: 1 })),
-          animate('3990ms ease-in-out', style({ opacity: 1 }))
+          animate('4000ms ease-in-out', style({ opacity: 1 }))
         ])
       ]),
-      transition(':leave', [
-        style({ height: 0, opacity: 1 }),
-        group([
-          animate(500, style({ height: 0 })),
-          animate('1000ms ease-in-out', style({ opacity: 0 }))
-        ])
-      ])
+      // transition(':leave', [
+      //   style({ height: 0, opacity: 1 }),
+      //   group([
+      //     animate(500, style({ height: 0 })),
+      //     animate('1000ms ease-in-out', style({ opacity: 0 }))
+      //   ])
+      // ])
     ])
   ]
 })
