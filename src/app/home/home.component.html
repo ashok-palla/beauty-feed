@@ -1,6 +1,6 @@
 <div class="slider" fxLayout="column" [style.background]="'url('+imageArray[pageIndex]+')'" (mouseenter)="clearTimer()"
     (mouseleave)="getSliderData()" (swipeleft)="increment()" (swiperight)="decrement()">
-    <div style="position: fixed;" *ngIf="shown" [@slideInOut]>
+    <div style="position: absolute;" *ngIf="shown" [@slideInOut]>
         <span>Shine your true beauty</span>
     </div>
     <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
