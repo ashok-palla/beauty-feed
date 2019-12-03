@@ -17,15 +17,15 @@ export class SharedService {
     ];
     public priorities = [
         {
-            image_url: 'assets/hair.jpg',
+            image_url: 'assets/skin.jpg',
             // tslint:disable-next-line: max-line-length
             description: 'Collagen Shot Premium with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
             height: 150
         },
         {
-            image_url: 'assets/skin.jpg',
+            image_url: 'assets/hair.jpg',
             // tslint:disable-next-line: max-line-length
-            description: 'Collagen Shot Premium with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
+            description: 'After a few weeks of regular use, your hair will be more powerful and shiny, and some of the ingredients in the product will also affect hair growth.',
             height: 150
         },
         {
@@ -45,6 +45,8 @@ export class SharedService {
             image_link: 'assets/00003.jpg',
             images: [
                 'assets/00003.jpg',
+                'assets/00009.jpg',
+                'assets/00010.jpg',
                 'assets/BackUp/13.jpg',
                 'assets/BackUp/14.jpg',
                 'assets/BackUp/15.jpg',
