@@ -46,7 +46,7 @@ export class SharedService {
             images: [
                 'assets/00003.jpg',
                 'assets/00009.jpg',
-                'assets/00010.jpg',
+                'assets/00010.jpg', 
                 'assets/BackUp/13.jpg',
                 'assets/BackUp/14.jpg',
                 'assets/BackUp/15.jpg',
