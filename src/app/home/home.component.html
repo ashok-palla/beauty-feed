@@ -1,5 +1,8 @@
 <div class="slider" fxLayout="column" [style.background]="'url('+imageArray[pageIndex]+')'" (mouseenter)="clearTimer()"
     (mouseleave)="getSliderData()" (swipeleft)="increment()" (swiperight)="decrement()">
+    <div style="position: fixed;" *ngIf="shown" [@slideInOut]>
+        <span>Shine your true beauty</span>
+    </div>
     <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
         <div fxHide fxShow.gt-sm fxLayoutAlign="center center" class="slider-nav-arrow" (click)="decrement()">
             <i class="material-icons">arrow_back_ios</i>
@@ -27,7 +30,7 @@
                         <p class="product-name" [innerHtml]="prod.name"></p>
                     </a>
                     <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
-                        <button (click)="sharedService.cartAdd(prod)" routerLink="/pre-order" class="buy_now_btn"
+                        <button fxFlex (click)="sharedService.cartAdd(prod)" routerLink="/pre-order" class="buy_now_btn"
                             mat-raised-button color="accent">
                             PRE-ORDER
                         </button>
