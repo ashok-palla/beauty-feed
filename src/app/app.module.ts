@@ -17,6 +17,7 @@ import { BlogComponent } from './blog/blog.component';
 import { ContactComponent } from './contact/contact.component';
 import { MyStoryComponent } from './my-story/my-story.component';
 import { CartComponent } from './cart/cart.component';
+import { PreOrderComponent } from './pre-order/pre-order.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = {
@@ -33,7 +34,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     BlogComponent,
     ContactComponent,
     MyStoryComponent,
-    CartComponent
+    CartComponent,
+    PreOrderComponent
   ],
   imports: [
     BrowserModule,
