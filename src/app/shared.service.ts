@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { isNullOrUndefined } from 'util';
 @Injectable()
 export class SharedService {
+    emailPattern = '^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$';
     public currency = 'EUR';
     public menuLinks = [
         { name: 'Home', link: '' },

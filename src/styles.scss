@@ -950,6 +950,19 @@ a {
     padding: 5px 14px;
     margin: 5px;
 }
+
 .parts-img-holder {
     height: 150px;
+}
+
+.mat-form-field-hint-spacer {
+    display: none;
+}
+
+.notification-dialog {
+    height: 100%;
+}
+
+.mat-dialog-container {
+    padding: 0 !important;
 }

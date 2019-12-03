@@ -18,6 +18,7 @@ import { ContactComponent } from './contact/contact.component';
 import { MyStoryComponent } from './my-story/my-story.component';
 import { CartComponent } from './cart/cart.component';
 import { PreOrderComponent } from './pre-order/pre-order.component';
+import { NotificationDialogComponent } from './notification-dialog/notification-dialog.component';
 
 export class MyHammerConfig extends HammerGestureConfig {
   overrides = {
@@ -35,7 +36,8 @@ export class MyHammerConfig extends HammerGestureConfig {
     ContactComponent,
     MyStoryComponent,
     CartComponent,
-    PreOrderComponent
+    PreOrderComponent,
+    NotificationDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +55,9 @@ export class MyHammerConfig extends HammerGestureConfig {
     { provide: LocationStrategy, useClass: HashLocationStrategy },
     { provide: HAMMER_GESTURE_CONFIG, useClass: MyHammerConfig }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    NotificationDialogComponent
+  ]
 })
 export class AppModule { }

@@ -1,1 +1,85 @@
-<p>pre-order works!</p>
+<div fxLayout="column" style="padding: 0 15px; padding-top: 10px;" ngStyle.gt-md="width: 920px; margin: 0 auto;">
+    <form fxLayout="column"
+        style="padding: 20px; padding-top: 10px; margin: 20px; border-radius: 8px; background-color: white"
+        [formGroup]="preOrderForm" (ngSubmit)="onSubmit()">
+        <div><b>Pre-Order form</b></div>
+        <span fxFlex="20px"></span>
+        <div fxLayout="row" fxLayout.lt-md="column">
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>First Name</mat-label>
+                <input autocomplete="off" placeholder="First Name" matInput formControlName="first_name" autofocus>
+                <mat-hint fxFlex>
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <div></div>
+                        <div>{{preOrderForm.get('first_name').value.length}}/100</div>
+                    </div>
+                </mat-hint>
+                <mat-error fxLayout="row" fxLayoutAlign="space-between center">
+                    <span *ngIf="preOrderForm.get('first_name').errors?.required">First name is
+                        required</span>
+                    <span *ngIf="preOrderForm.get('first_name').errors?.maxlength">100 charecters only
+                        allowed</span>
+                    <div>{{preOrderForm.get('first_name').value.length}}/100</div>
+                </mat-error>
+            </mat-form-field>
+            <span fxFlex="30px"></span>
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Last Name</mat-label>
+                <input autocomplete="off" matInput formControlName="last_name">
+                <mat-hint fxFlex>
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <div></div>
+                        <div>{{preOrderForm.get('last_name').value.length}}/100</div>
+                    </div>
+                </mat-hint>
+                <mat-error fxLayout="row" fxLayoutAlign="space-between center">
+                    <span *ngIf="preOrderForm.get('last_name').errors?.required">First name is
+                        required</span>
+                    <span *ngIf="preOrderForm.get('last_name').errors?.maxlength">100 charecters only
+                        allowed</span>
+                    <div>{{preOrderForm.get('last_name').value.length}}/100</div>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Email</mat-label>
+                <input autocomplete="off" matInput formControlName="email">
+                <mat-error fxLayout="row" fxLayoutAlign="space-between center">
+                    <span *ngIf="preOrderForm.get('email').errors?.required">Email is required</span>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <mat-form-field appearance="outline" fxFlex>
+                <mat-label>Mobile Number</mat-label>
+                <input autocomplete="off" autocomplete="false" formControlName="mobile_number" matInput>
+                <mat-error>
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <span *ngIf="preOrderForm.get('mobile_number').errors?.required">Mobile number is
+                            required</span>
+                        <span
+                            *ngIf="preOrderForm.get('mobile_number').errors?.minlength || preOrderForm.get('mobile_number').errors?.maxlength">Enter
+                            valid 10-digit mobile number</span>
+                        <div>{{preOrderForm.get('mobile_number').value.length}}/10</div>
+                    </div>
+                </mat-error>
+                <mat-hint fxFlex>
+                    <div fxLayout="row" fxLayoutAlign="space-between center">
+                        <div></div>
+                        <div>{{preOrderForm.get('mobile_number').value.length}}/10</div>
+                    </div>
+                </mat-hint>
+            </mat-form-field>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="3%" style="margin-top: 15px;">
+            <div>
+                <!-- <mat-checkbox formControlName="send_email">Send email</mat-checkbox> -->
+            </div>
+            <div fxLayout="row" fxLayoutGap="5%">
+                <button class="buy_now_btn" type="submit" mat-raised-button color="primary"
+                    [disabled]="preOrderForm.invalid && preOrderForm.touched">PRE-ORDER</button>
+            </div>
+        </div>
+    </form>
+</div>
