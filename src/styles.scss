@@ -987,7 +987,7 @@ a {
 }
 
 .why-col {
-    color: #977d59;
+    color: $color-four;
     margin-bottom: 15px !Important;
     font-size: 55px;
     line-height: 74px;
@@ -997,7 +997,7 @@ a {
 }
 
 .why-h5 {
-    color: #634925;
+    color: goldenrod;
     font-size: 14px;
     font-family: montserrat, sans-serif;
     font-weight: 500;
@@ -1011,7 +1011,7 @@ a {
 .why-number {
     font-family: abril fatface, sans-serif;
     font-size: 55px;
-    color: #977d59;
+    color: $color-four;
     margin-right: 25px;
 }
 
@@ -1020,7 +1020,7 @@ a {
 }
 
 .number strong {
-    color: #977d59;
+    color: $color-four;
     // font-family: abril fatface, sans-serif;
     font-weight: bolder;
 }
