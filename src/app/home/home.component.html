@@ -1,6 +1,9 @@
 <div class="slider" fxLayout="column" [style.background]="'url('+imageArray[pageIndex]+')'" (mouseenter)="clearTimer()"
     (mouseleave)="getSliderData()" (swipeleft)="increment()" (swiperight)="decrement()">
-    <div style="position: absolute;" *ngIf="shown" [@slideInOut]>
+    <!-- <div style="position: absolute;" *ngIf="shown" [@slideInOut]>
+        <span>Shine your true beauty</span>
+    </div> -->
+    <div data-animated="true" class="animate fadeInLeft layerText">
         <span>Shine your true beauty</span>
     </div>
     <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
@@ -19,10 +22,10 @@
 <section id="mb-categories">
     <div class="page-container bg" fxLayout="column" style="padding-bottom: 30px;">
         <div class="category-head">
-            <h2 style="font-size: 28px;">FEATURED PRODUCTS</h2>
+            <h2 style="font-size: 28px;" class="fadeInLeft animate">FEATURED PRODUCTS</h2>
         </div>
         <div fxLayoutAlign="center" fxLayoutGap.gt-md="40px" fxLayout="row" fxLayout.lt-md="column">
-            <div ngStyle.gt-md="max-width: 630px;"> 
+            <div ngStyle.gt-md="max-width: 630px;">
                 <h2 class="why-col">Why Collagen?</h2>
                 <h5 class="why-h5">AFTER THE AGE OF 20</h5>
                 <p style="color: #4d4d4d;;">Collagen is an integral part of our skin, hair, nails and articular
