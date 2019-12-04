@@ -21,19 +21,22 @@ export class SharedService {
             image_url: 'assets/skin.jpg',
             // tslint:disable-next-line: max-line-length
             description: 'Collagen Shot Premium with its active ingredients can improve the condition of the skin to make it more elastic, supple and give your face a fresher look.',
-            height: 150
+            height: 150,
+            width: 234.5
         },
         {
             image_url: 'assets/hair.jpg',
             // tslint:disable-next-line: max-line-length
-            description: 'Contains low molecular weight fish collagen, which enables its excellent absorption.',
-            height: 150
+            description: 'Collagen Shot Premium with its active ingredients can improve the strength and condition of your hair.',
+            height: 150,
+            width: 234.5
         },
         {
             image_url: 'assets/nails.jpg',
             // tslint:disable-next-line: max-line-length
             description: 'Zinc in the product helps keep nails healthy, and using Collagen Shot Premium will make your nails firmer.',
-            height: 150
+            height: 150,
+            width: 234.5
         }
     ];
     public products = [
@@ -111,13 +114,13 @@ export class SharedService {
     public collegenshotbenefits = [
         {
             title: 'Fish collagen',
-            description: 'Contains low molecular weight fish collagen, which enables its excellent absorption.',
+            description: 'Contains low molecular weight fish collagen, which enables its <strong>excellent absorption</strong>.',
             image_url: 'assets/benefits/icon-riba.png',
             height: 100
         },
         {
             title: 'Vitamins and zinc',
-            description: 'For maximum efficiency, Vitamin C, E, B6 and Biotin and Zinc are added to Collagen Shot Premium.',
+            description: 'For maximum efficiency, <strong>Vitamin C, E, B6</strong> and <strong>Biotin</strong> and <strong>Zinc</strong> are added to Collagen Shot Premium.',
             image_url: 'assets/benefits/icon-vitamini.png',
             height: 100
         },

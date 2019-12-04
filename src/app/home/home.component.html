@@ -4,12 +4,12 @@
         <span>Shine your true beauty</span>
     </div>
     <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
-        <div fxHide fxShow.gt-sm fxLayoutAlign="center center" class="slider-nav-arrow" (click)="decrement()">
+        <!-- <div fxHide fxShow.gt-sm fxLayoutAlign="center center" class="slider-nav-arrow" (click)="decrement()">
             <i class="material-icons">arrow_back_ios</i>
         </div>
         <div fxHide fxShow.gt-sm fxLayoutAlign="center center" class="slider-nav-arrow" (click)="increment()">
             <i class="material-icons">arrow_forward_ios</i>
-        </div>
+        </div> -->
     </div>
     <div fxLayoutAlign="center center" class="pagination">
         <div [class.page-index-circle]="pageIndex !== i" [class.page-index-fill]="pageIndex === i"
@@ -75,15 +75,14 @@
         </div>
     </div> -->
     <div class="page-container center-align" style="padding-top: 30px;">
-        <div style="display: inline;">
-            <div *ngFor="let benefits of sharedService.priorities" style="display: inline-block;">
-                <div class="parts-inner-protein">
-                    <div class="parts-img-holder">
-                        <img [style.height.px]="benefits.height" [alt]="benefits.image_url" style="display: inline;"
-                            [src]="benefits.image_url">
-                    </div>
-                    <p class="benefit-description" [innerHtml]="benefits.description"></p>
+        <div *ngFor="let benefits of sharedService.priorities" style="display: inline-block;">
+            <div fxLayout="column" class="parts-inner-protein">
+                <div class="parts-img-holder">
+                    <img [style.height.px]="benefits.height" [style.width.px]="benefits.width"
+                        [alt]="benefits.image_url" style="display: inline;" [src]="benefits.image_url">
                 </div>
+                <span fxFlex="10px"></span>
+                <p class="benefit-description" [innerHtml]="benefits.description"></p>
             </div>
         </div>
     </div>
@@ -91,16 +90,14 @@
         <div class="category-head" style="text-align: center;">
             <h2>Benefits of Collagen Shot Premium</h2>
         </div>
-        <div style="display: inline;">
-            <div *ngFor="let benefits of sharedService.collegenshotbenefits" style="display: inline-block;">
-                <div class="benefits-inner-protein">
-                    <div class="benefits-img-holder">
-                        <img [style.height.px]="benefits.height" [alt]="benefits.image_url" style="display: inline;"
-                            [src]="benefits.image_url">
-                    </div>
-                    <h2 class="benefit-name" [innerHtml]="benefits.title"></h2>
-                    <p class="benefit-description" [innerHtml]="benefits.description"></p>
+        <div *ngFor="let benefits of sharedService.collegenshotbenefits" style="display: inline-block;">
+            <div fxLayout="column" class="benefits-inner-protein">
+                <div class="benefits-img-holder">
+                    <img [style.height.px]="benefits.height" [alt]="benefits.image_url" style="display: inline;"
+                        [src]="benefits.image_url">
                 </div>
+                <h2 class="benefit-name" [innerHtml]="benefits.title"></h2>
+                <p class="benefit-description" [innerHtml]="benefits.description"></p>
             </div>
         </div>
     </div>
