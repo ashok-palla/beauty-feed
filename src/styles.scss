@@ -1047,10 +1047,10 @@ a {
 /*=== Trigger  ===*/
 @media only screen and (max-width: 600px) {
     .layerText {
-        font-size: 22.5px;
-        line-height: 36px;
-        width: 80%;
-        top: 40%;
+        font-size: 22.5px !important;
+        line-height: 36px !important;
+        width: 80% !important;
+        top: 40% !important;
     }
 }
 
