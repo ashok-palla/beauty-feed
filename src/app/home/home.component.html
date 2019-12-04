@@ -17,23 +17,51 @@
     </div>
 </div>
 <section id="mb-categories">
-    <div class="page-container center-align bg" style="padding-bottom: 30px;">
+    <div class="page-container bg" fxLayout="column" style="padding-bottom: 30px;">
         <div class="category-head">
             <h2 style="font-size: 28px;">FEATURED PRODUCTS</h2>
         </div>
-        <div style="display: inline;">
-            <div *ngFor="let prod of category" style="display: inline-block;">
-                <div class="inner-protein">
-                    <div class="offer-tag">Coming Soon</div>
-                    <a [href]="prod.url">
-                        <img class="lazy" [alt]="prod.name" style="display: inline;" [src]="prod.image_link">
-                        <p class="product-name" [innerHtml]="prod.name"></p>
-                    </a>
-                    <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
-                        <button fxFlex (click)="sharedService.cartAdd(prod)" routerLink="/pre-order" class="buy_now_btn"
-                            mat-raised-button color="accent">
-                            PRE-ORDER
-                        </button>
+        <div fxLayoutAlign="center" fxLayoutGap.gt-md="40px" fxLayout="row" fxLayout.lt-md="column">
+            <div ngStyle.gt-md="max-width: 630px;">
+                <h2 class="why-col">Why Collagen?</h2>
+                <h5 class="why-h5">AFTER THE AGE OF 20</h5>
+                <p style="color: #4d4d4d;;">Collagen is an integral part of our skin, hair, nails and articular
+                    cartilage. Our body is capable of
+                    producing collagen, but after the age of 20 the overall amount of collagen production slows down.
+                </p>
+                <div fxLayout="column">
+                    <div class="number" fxLayout="row">
+                        <span class="why-number">1.</span>
+                        <p class="why-p">For <strong>youthful skin appearance</strong></p>
+                    </div>
+                </div>
+                <div fxLayout="column">
+                    <div class="number" fxLayout="row">
+                        <span class="why-number">2.</span>
+                        <p class="why-p">For <strong>shiny hair</strong></p>
+                    </div>
+                </div>
+                <div fxLayout="column">
+                    <div class="number" fxLayout="row">
+                        <span class="why-number">3.</span>
+                        <p class="why-p">For stronger and beautiful <strong>nails</strong></p>
+                    </div>
+                </div>
+            </div>
+            <div style="display: inline;" ngStyle.lt-md="text-align: center">
+                <div *ngFor="let prod of category" style="display: inline-block;">
+                    <div class="inner-protein">
+                        <div class="offer-tag">Coming Soon</div>
+                        <a [href]="prod.url">
+                            <img class="lazy" [alt]="prod.name" style="display: inline;" [src]="prod.image_link">
+                            <p class="product-name" [innerHtml]="prod.name"></p>
+                        </a>
+                        <div fxLayout="row" fxLayoutAlign="center" style="margin: 10px 0;">
+                            <button fxFlex (click)="sharedService.cartAdd(prod)" routerLink="/pre-order"
+                                class="buy_now_btn" mat-raised-button color="accent">
+                                PRE-ORDER
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
