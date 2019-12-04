@@ -10,7 +10,7 @@
                 <img class="preview-img" [alt]="prod.name" style="display: inline;" [src]="prod?.image_preview_link">
             </div>
         </div>
-        <div fxLayout="column" fxFlex> 
+        <div fxLayout="column" fxFlex>
             <h1 class="product-name" [innerHtml]="prod?.name" style="padding-bottom: 5px;"></h1>
             <div>
                 <!-- <span class="product-offer-tag" *ngIf="prod.offer_price > 0">{{prod?.offer_price/prod?.mrp | percent}}
@@ -197,6 +197,6 @@
                     use.</span>
             </mat-tab>
         </mat-tab-group>
-
     </section>
+    <span fxFlex="30px"></span>
 </div>

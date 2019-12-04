@@ -1030,3 +1030,11 @@ a {
     color: #4d4d4d;
     font-family: "Montserrat", sans-serif;
 }
+
+.mat-tab-label-active .mat-tab-label-content {
+    color: $color-four;
+}
+
+.mat-ink-bar {
+    background-color: $color-four !important;
+}
