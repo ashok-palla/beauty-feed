@@ -1,24 +1,26 @@
 <div fxLayout="column" style="padding: 0 15px; padding-top: 50px;" ngStyle.gt-md="width: 920px; margin: 0 auto;">
-    <div fxFlex fxLayout="row" fxLayout.lt-md="column">
-        <div fxLayout="row" fxFlex>
-            <div fxLayout="column">
-                <img [class.selected-image]="prod?.image_preview_link == img" (click)="prod.image_preview_link = img"
-                    class="thumbmails" [alt]="prod?.name" style="display: inline;" [src]="img"
-                    *ngFor="let img of prod?.images">
+    <div>
+        <div fxFlex fxLayout="row" fxLayout.lt-md="column">
+            <div fxLayout="row" fxFlex>
+                <div fxLayout="column">
+                    <img [class.selected-image]="prod?.image_preview_link == img"
+                        (click)="prod.image_preview_link = img" class="thumbmails" [alt]="prod?.name"
+                        style="display: inline;" [src]="img" *ngFor="let img of prod?.images">
+                </div>
+                <div fxLayoutAlign="center center" style="width: 420px; height: 420px; overflow: hidden;">
+                    <img class="preview-img" [alt]="prod.name" style="display: inline;"
+                        [src]="prod?.image_preview_link">
+                </div>
             </div>
-            <div fxLayoutAlign="center center" style="width: 420px; height: 420px; overflow: hidden;">
-                <img class="preview-img" [alt]="prod.name" style="display: inline;" [src]="prod?.image_preview_link">
-            </div>
-        </div>
-        <div fxLayout="column" fxFlex>
-            <h1 class="product-name" [innerHtml]="prod?.name" style="padding-bottom: 5px;"></h1>
-            <div>
-                <!-- <span class="product-offer-tag" *ngIf="prod.offer_price > 0">{{prod?.offer_price/prod?.mrp | percent}}
+            <div fxLayout="column" fxFlex>
+                <h1 class="product-name" [innerHtml]="prod?.name" style="padding-bottom: 5px;"></h1>
+                <div>
+                    <!-- <span class="product-offer-tag" *ngIf="prod.offer_price > 0">{{prod?.offer_price/prod?.mrp | percent}}
                     OFF</span> -->
-                <span class="product-offer-tag" *ngIf="prod.offer_price > 0">Coming Soon</span>
-            </div>
-            <span fxFlex="20px"></span>
-            <!-- <dd class="product-price">
+                    <span class="product-offer-tag" *ngIf="prod.offer_price > 0">Coming Soon</span>
+                </div>
+                <span fxFlex="20px"></span>
+                <!-- <dd class="product-price">
                 <div class="price-tag" fxLayoutGap="20px">
                     <span
                         class="price">{{(prod?.mrp - prod?.offer_price) | currency: sharedService?.currency : 'symbol' : '1.0-0'}}</span><del
@@ -26,18 +28,18 @@
                         *ngIf="prod?.offer_price > 0">{{prod?.mrp | currency: sharedService?.currency : 'symbol' : '1.0-0'}}</del>
                 </div>
             </dd> -->
-            <div>
-                <div>Net Quantity: </div>
-                <div style="display: inline;">
-                    <div class="product-quantity" [class.out-of-stock]="!quanti?.in_stock"
-                        [class.selected-quantity]="quantity == quanti?.qua" *ngFor="let quanti of prod.quantity">
-                        {{quanti?.qua}}&nbsp;{{prod?.measure}}</div>
+                <div>
+                    <div>Net Quantity: </div>
+                    <div style="display: inline;">
+                        <div class="product-quantity" [class.out-of-stock]="!quanti?.in_stock"
+                            [class.selected-quantity]="quantity == quanti?.qua" *ngFor="let quanti of prod.quantity">
+                            {{quanti?.qua}}&nbsp;{{prod?.measure}}</div>
+                    </div>
                 </div>
-            </div>
-            <!-- <div class="stock-details">
+                <!-- <div class="stock-details">
                 {{prod?.in_stock | number }} in stock
             </div> -->
-            <!-- <div class="product-buttons">
+                <!-- <div class="product-buttons">
                 <div class="offer-description" [innerHtml]="prod?.offer_description"
                     *ngIf="prod?.offer_description && prod?.offer_description?.length > 0"></div>
                 <div fxLayout="row" fxLayoutAlign="start center" style="margin: 10px 0;">
@@ -52,14 +54,15 @@
                     </button>
                 </div>
             </div> -->
-            <div class="product-buttons">
-                <div class="offer-description" [innerHtml]="prod?.offer_description"
-                    *ngIf="prod?.offer_description && prod?.offer_description?.length > 0"></div>
-                <div fxLayout="row" fxLayoutAlign="start center" style="margin: 10px 0;">
-                    <button (click)="sharedService.cartAdd(prod)" routerLink="/pre-order" class="buy_now_btn"
-                        mat-raised-button color="accent">
-                        PRE-ORDER
-                    </button>
+                <div class="product-buttons">
+                    <div class="offer-description" [innerHtml]="prod?.offer_description"
+                        *ngIf="prod?.offer_description && prod?.offer_description?.length > 0"></div>
+                    <div fxLayout="row" fxLayoutAlign="start center" style="margin: 10px 0;">
+                        <button (click)="sharedService.cartAdd(prod)" routerLink="/pre-order" class="buy_now_btn"
+                            mat-raised-button color="accent">
+                            PRE-ORDER
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
