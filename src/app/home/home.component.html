@@ -3,7 +3,7 @@
     <!-- <div style="position: absolute;" *ngIf="shown" [@slideInOut]>
         <span>Shine your true beauty</span>
     </div> -->
-    <div data-animated="true" class="animate fadeInLeft layerText">
+    <div data-animated="true" class="animate fadeInLeft layerText" [class.layerText_1]="pageIndex === 0">
         <span>Shine your true beauty</span>
     </div>
     <div fxFlex fxLayout="row" fxLayoutAlign="space-between center">
