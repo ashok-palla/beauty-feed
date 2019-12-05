@@ -1,6 +1,6 @@
 <div fxLayout="column" style="padding: 0 15px; padding-top: 50px;" ngStyle.gt-md="width: 920px; margin: 0 auto;">
     <div fxFlex fxLayout="row" fxLayout.lt-md="column">
-        <div fxLayout="row" fxFlex>
+        <div fxLayout="row">
             <div fxLayout="column">
                 <img [class.selected-image]="prod?.image_preview_link == img" (click)="prod.image_preview_link = img"
                     class="thumbmails" [alt]="prod?.name" style="display: inline;" [src]="img"
@@ -10,7 +10,7 @@
                 <img class="preview-img" [alt]="prod.name" style="display: inline;" [src]="prod?.image_preview_link">
             </div>
         </div>
-        <div fxLayout="column" fxFlex>
+        <div fxLayout="column">
             <h1 class="product-name" [innerHtml]="prod?.name" style="padding-bottom: 5px;"></h1>
             <div>
                 <!-- <span class="product-offer-tag" *ngIf="prod.offer_price > 0">{{prod?.offer_price/prod?.mrp | percent}}
@@ -63,33 +63,30 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div>
-        <section>
-            <div class="page-container center-align product-description">
-                <h2 class="benefit-name">Product Description</h2>
-                <p>Nutritional supplement with collagen, MSM, hyaluronic acid and vitamins for complete skin care from
-                    the
-                    inside for a youthful appearance, maintaining beautiful hair and firm nails. With sweeteners.</p>
-                <p><b>Collagen</b> and MSM in solution - Collagen shot is a highly concentrated anti-aging dietary
-                    supplement with
-                    collagen, MSM, hyaluronic acid, vitamins and <b>ZINC</b> for complete skin care from the inside for
-                    a
-                    youthful
-                    appearance, maintaining beautiful hair and firm nails.</p>
-                <p>It contains low molecular weight <b>fish collagen</b>, which gives it excellent absorption. The body
-                    loses
-                    certain nutrients in the natural aging process, and by regularly consuming collagen, we maintain a
-                    youthful appearance.</p>
-                <p>Collagen shot in liquid tastes good for pomegranates, with sweeteners and no sugars and fats.</p>
-                <span><b>Purpose</b> : Affects the appearance of the skin, hair and nails.</span><br>
-                <span><b>The recommended daily amount</b> is 25 ml.</span><br><br>
-                <!-- <h2 class="benefit-name">Instructions for use</h2>
+    </div>z
+    <section id="mb-categories">
+        <div class="page-container center-align product-description">
+            <h2 class="benefit-name">Product Description</h2>
+            <p>Nutritional supplement with collagen, MSM, hyaluronic acid and vitamins for complete skin care from the
+                inside for a youthful appearance, maintaining beautiful hair and firm nails. With sweeteners.</p>
+            <p><b>Collagen</b> and MSM in solution - Collagen shot is a highly concentrated anti-aging dietary
+                supplement with
+                collagen, MSM, hyaluronic acid, vitamins and <b>ZINC</b> for complete skin care from the inside for a
+                youthful
+                appearance, maintaining beautiful hair and firm nails.</p>
+            <p>It contains low molecular weight <b>fish collagen</b>, which gives it excellent absorption. The body
+                loses
+                certain nutrients in the natural aging process, and by regularly consuming collagen, we maintain a
+                youthful appearance.</p>
+            <p>Collagen shot in liquid tastes good for pomegranates, with sweeteners and no sugars and fats.</p>
+            <span><b>Purpose</b> : Affects the appearance of the skin, hair and nails.</span><br>
+            <span><b>The recommended daily amount</b> is 25 ml.</span><br><br>
+            <!-- <h2 class="benefit-name">Instructions for use</h2>
             <p>Recommended daily dosage is 25 ml. You can drink it once a day with the container that is provided in the
                 package or you can mix it with water, lemonade, orange juice or other soft drink</p>
             <span><b>Form</b> : 500 ml bottle with the supplied dosage cap in a cardboard box. Sufficient for 20 days of
                 use.</span><br><br> -->
-                <!-- <h2 class="benefit-name" style="text-transform: uppercase; font-weight: bold;">Active ingredients</h2>
+            <!-- <h2 class="benefit-name" style="text-transform: uppercase; font-weight: bold;">Active ingredients</h2>
             <p>HYDROLYZED <b>FISH COLLAGEN</b> TYPE 1 - Type 1 collagen is the most represented protein in the body,
                 accounting
                 for 80% of the dermis. Collagen is an integral part of the skin, hair, nails and articular cartilage. As
@@ -132,81 +129,74 @@
                     <p style="text-align: center;">NO SUGAR</p>
                 </div>
             </div> -->
-                <!-- <h2 class="benefit-name">Ingredients</h2>
+            <!-- <h2 class="benefit-name">Ingredients</h2>
             <p>Water, hydrolyzed fish collagen (allergen: RIBE), sweetener: sorbitol syrup, MSM, vitamin C (L-ascorbic
                 acid), flavors, black carrot juice, acid: citric acid, sodium hyaluronate, ZINC (ZINC gluconate),
                 vitamin E ( DL-alpha-tocopheryl acetate), preservative: potassium sorbate and sodium benzoate,
                 sweetener: sucralose, vitamin B6 (pyridoxine hydrochloride), biotin (D-biotin).</p> -->
-            </div>
-            <mat-tab-group class="instructions">
-                <mat-tab label="Ingredients">
-                    <p>Water, hydrolyzed fish collagen (allergen: RIBE), sweetener: sorbitol syrup, MSM, vitamin C
-                        (L-ascorbic
-                        acid), flavors, black carrot juice, acid: citric acid, sodium hyaluronate, ZINC (ZINC
-                        gluconate),
-                        vitamin E ( DL-alpha-tocopheryl acetate), preservative: potassium sorbate and sodium benzoate,
-                        sweetener: sucralose, vitamin B6 (pyridoxine hydrochloride), biotin (D-biotin).</p>
+        </div>
+        <mat-tab-group class="instructions">
+            <mat-tab label="Ingredients">
+                <p>Water, hydrolyzed fish collagen (allergen: RIBE), sweetener: sorbitol syrup, MSM, vitamin C
+                    (L-ascorbic
+                    acid), flavors, black carrot juice, acid: citric acid, sodium hyaluronate, ZINC (ZINC gluconate),
+                    vitamin E ( DL-alpha-tocopheryl acetate), preservative: potassium sorbate and sodium benzoate,
+                    sweetener: sucralose, vitamin B6 (pyridoxine hydrochloride), biotin (D-biotin).</p>
 
-                </mat-tab>
-                <mat-tab label="Active Ingredients">
-                    <p>HYDROLYZED <b>FISH COLLAGEN</b> TYPE 1 - Type 1 collagen is the most represented protein in the
-                        body,
-                        accounting
-                        for 80% of the dermis. Collagen is an integral part of the skin, hair, nails and articular
-                        cartilage. As
-                        the amount of collagen production in the body slows down after the age of 20, consuming
-                        hydrolyzed
-                        collagen can help maintain a youthful appearance of skin, more beautiful hair and have a
-                        beneficial
-                        effect on nail condition.</p>
-                    <p>MSM - Organic sulfur is one of the components of collagen. Because of its effects on the body, it
-                        is
-                        often called the mineral of beauty.</p>
-                    <p>HIALURONIC ACID - No other biological substance can bind as much water as hyaluronic acid, which
-                        means
-                        that it is an excellent moisturizing substance, resulting in smoother, softer skin and less
-                        wrinkles.</p>
-                    <p>VITAMIN C - Indispensable for the new growth of collagen connective tissue, plays a role in the
-                        production of collagen for normal skin function.</p>
-                    <p>BIOTIN - Contributes to maintaining healthy skin and hair.</p>
-                    <p>ZINC - Contributes to maintaining healthy skin, hair and nails.</p>
-                    <p>VITAMIN E - plays a role in protecting cells from oxidative stress.</p><br>
-                    <div class="free-ingredients">
-                        <div style="text-align: center;">
-                            <img src="assets/gluten free.png" width="90">
-                        </div>
-                        <p style="text-align: center;">GLUTEN FREE</p>
+            </mat-tab>
+            <mat-tab label="Active Ingredients">
+                <p>HYDROLYZED <b>FISH COLLAGEN</b> TYPE 1 - Type 1 collagen is the most represented protein in the body,
+                    accounting
+                    for 80% of the dermis. Collagen is an integral part of the skin, hair, nails and articular
+                    cartilage. As
+                    the amount of collagen production in the body slows down after the age of 20, consuming hydrolyzed
+                    collagen can help maintain a youthful appearance of skin, more beautiful hair and have a beneficial
+                    effect on nail condition.</p>
+                <p>MSM - Organic sulfur is one of the components of collagen. Because of its effects on the body, it is
+                    often called the mineral of beauty.</p>
+                <p>HIALURONIC ACID - No other biological substance can bind as much water as hyaluronic acid, which
+                    means
+                    that it is an excellent moisturizing substance, resulting in smoother, softer skin and less
+                    wrinkles.</p>
+                <p>VITAMIN C - Indispensable for the new growth of collagen connective tissue, plays a role in the
+                    production of collagen for normal skin function.</p>
+                <p>BIOTIN - Contributes to maintaining healthy skin and hair.</p>
+                <p>ZINC - Contributes to maintaining healthy skin, hair and nails.</p>
+                <p>VITAMIN E - plays a role in protecting cells from oxidative stress.</p><br>
+                <div class="free-ingredients">
+                    <div style="text-align: center;">
+                        <img src="assets/gluten free.png" width="90">
                     </div>
-                    <div class="free-ingredients">
-                        <div style="text-align: center;">
-                            <img src="assets/gmo free.png" width="90">
-                        </div>
-                        <p style="text-align: center;">WITHOUT GENETICALLY MODIFIED ORGANISMS</p>
+                    <p style="text-align: center;">GLUTEN FREE</p>
+                </div>
+                <div class="free-ingredients">
+                    <div style="text-align: center;">
+                        <img src="assets/gmo free.png" width="90">
                     </div>
-                    <div class="free-ingredients">
-                        <div style="text-align: center;">
-                            <img src="assets/lactose free.png" width="90">
-                        </div>
-                        <p style="text-align: center;">NO LACTOSE</p>
+                    <p style="text-align: center;">WITHOUT GENETICALLY MODIFIED ORGANISMS</p>
+                </div>
+                <div class="free-ingredients">
+                    <div style="text-align: center;">
+                        <img src="assets/lactose free.png" width="90">
                     </div>
-                    <div class="free-ingredients">
-                        <div style="text-align: center;">
-                            <img src="assets/sugar free.png" width="90">
-                        </div>
-                        <p style="text-align: center;">NO SUGAR</p>
+                    <p style="text-align: center;">NO LACTOSE</p>
+                </div>
+                <div class="free-ingredients">
+                    <div style="text-align: center;">
+                        <img src="assets/sugar free.png" width="90">
                     </div>
-                </mat-tab>
-                <mat-tab label="Dosage">
-                    <p>Recommended daily dosage is 25 ml. You can drink it once a day with the container that is
-                        provided in
-                        the
-                        package or you can mix it with water, lemonade, orange juice or other soft drink</p>
-                    <span><b>Form</b> : 500 ml bottle with the supplied dosage cap in a cardboard box. Sufficient for 20
-                        days of
-                        use.</span>
-                </mat-tab>
-            </mat-tab-group>
-        </section>
-    </div>
-    <span fxFlex="30px"></span>
+                    <p style="text-align: center;">NO SUGAR</p>
+                </div>
+            </mat-tab>
+            <mat-tab label="Dosage">
+                <p>Recommended daily dosage is 25 ml. You can drink it once a day with the container that is provided in
+                    the
+                    package or you can mix it with water, lemonade, orange juice or other soft drink</p>
+                <span><b>Form</b> : 500 ml bottle with the supplied dosage cap in a cardboard box. Sufficient for 20
+                    days of
+                    use.</span>
+            </mat-tab>
+        </mat-tab-group>
+    </section>
+    <span fxFlex="30px"></span> 
 </div>
