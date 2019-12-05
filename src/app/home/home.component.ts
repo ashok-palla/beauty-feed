@@ -34,9 +34,9 @@ export class HomeComponent implements OnInit {
   public pageIndex = 0;
   public imageArray = [
     'https://res.cloudinary.com/ashokpalla/image/upload/c_crop/v1575567163/BackUp/16_jqfd9a.jpg',
-    'https://res.cloudinary.com/ashokpalla/image/upload/c_thumb,h_1000,w_1316/BackUp/11_vedkwl.jpg',
-    'https://res.cloudinary.com/ashokpalla/image/upload/c_thumb,h_1000,w_1316/BackUp/12_dvpcay.jpg',
-    'https://res.cloudinary.com/ashokpalla/image/upload/c_thumb,h_1000,w_1316/BackUp/13_hglhqc.jpg'];
+    'https://res.cloudinary.com/ashokpalla/image/upload/v1575567163/BackUp/11_vedkwl.jpg',
+    'https://res.cloudinary.com/ashokpalla/image/upload/v1575567163/BackUp/12_dvpcay.jpg',
+    'https://res.cloudinary.com/ashokpalla/image/upload/v1575567163/BackUp/13_hglhqc.jpg'];
   public category = [
     {
       name: 'Collagen Shot Premium',
