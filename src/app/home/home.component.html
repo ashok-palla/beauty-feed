@@ -1,4 +1,4 @@
-<div class="slider" fxLayout="column" [style.background]="'url('+imageArray[pageIndex]+')'" (mouseenter)="clearTimer()"
+<div class="slider" ngStyle="max-height: 700px" ngStyle.lt-md="max-height: 300px" fxLayout="column" [style.background]="'url('+imageArray[pageIndex]+')'" (mouseenter)="clearTimer()"
     (mouseleave)="getSliderData()" (swipeleft)="increment()" (swiperight)="decrement()">
     <!-- <div style="position: absolute;" *ngIf="shown" [@slideInOut]>
         <span>Shine your true beauty</span>
