@@ -33,23 +33,23 @@ export class HomeComponent implements OnInit {
   timer;
   public pageIndex = 0;
   public imageArray = [
-    'assets/16.jpg',
-    'assets/BackUp/11.jpg',
-    'assets/BackUp/12.jpg',
-    'assets/BackUp/13.jpg'];
+    'https://res.cloudinary.com/ashokpalla/image/upload/c_crop/v1575567163/BackUp/16_jqfd9a.jpg',
+    'https://res.cloudinary.com/ashokpalla/image/upload/c_thumb,h_1000,w_1316/BackUp/11_vedkwl.jpg',
+    'https://res.cloudinary.com/ashokpalla/image/upload/c_thumb,h_1000,w_1316/BackUp/12_dvpcay.jpg',
+    'https://res.cloudinary.com/ashokpalla/image/upload/c_thumb,h_1000,w_1316/BackUp/13_hglhqc.jpg'];
   public category = [
     {
       name: 'Collagen Shot Premium',
-      image_original_link: 'assets/00003.jpg',
-      image_link: 'assets/00003.jpg',
+      image_original_link: 'https://res.cloudinary.com/ashokpalla/image/upload/v1575562054/00003_xuhjvk.jpg',
+      image_link: 'https://res.cloudinary.com/ashokpalla/image/upload/v1575562054/00003_xuhjvk.jpg',
       url: '#/product/1',
     }
   ];
   public blogs = [
     {
       name: 'Production of natural cosmetics',
-      image_original_link: 'assets/izrada-prirodne-kozmetike-1-800x178.jpg',
-      image_link: 'assets/izrada-prirodne-kozmetike-1-800x178.jpg',
+      image_original_link: 'https://res.cloudinary.com/ashokpalla/image/upload/v1575562054/izrada-prirodne-kozmetike-1-800x178_nn21tn.jpg',
+      image_link: 'https://res.cloudinary.com/ashokpalla/image/upload/v1575562054/izrada-prirodne-kozmetike-1-800x178_nn21tn.jpg',
       url: '#/product/1',
     }
     // {
