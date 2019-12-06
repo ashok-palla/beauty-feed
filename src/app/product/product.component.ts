@@ -7,7 +7,7 @@ import { SharedService } from '../shared.service';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  @HostBinding('attr.class') role = 'vbox viewport margin_on_top';
+  @HostBinding('attr.class') role = 'vbox viewport margin_on_top bg';
   public prod = this.sharedService.products[0];
   public quantity = 500;
   constructor(public sharedService: SharedService) { }
